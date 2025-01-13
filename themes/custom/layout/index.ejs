@@ -1,36 +1,269 @@
 <style>
   #hero {
     position: relative;
-    height: 400px;
-    background: linear-gradient(0deg, #f3b926 0%, #ffd671 100%);
+    padding: 0 0 100%;
+    background: linear-gradient(0deg, var(--color-highlight) 0%, #ffd671 100%);
   }
   #hero figure {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     margin: 0;
   }
   #hero figure img {
     display: block;
-    width: 320px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     height: auto;
   }
   @media (min-width: 768px) {
     #hero {
       height: 100vh;
-      background: #e9ecf1;
+      padding: 0;
+      background: var(--color-off-white);
     }
     #hero figure img {
-      display: block;
       width: auto;
-      height: 700px;
+      height: 85%;
     }
   }
 </style>
-
 <div id="hero">
   <figure>
-    <img src="/images/img-hero.png" alt="">
+    <img src="/images/fig-hero.png" alt="">
   </figure>
 </div>
+
+<style>
+  #slogan {
+    padding: 30px 0;
+    background-color: var(--color-footer-background);
+    color: #fff;
+    text-align: center;
+  }
+  #slogan h1 {
+    font-size: 24px;
+  }
+  #slogan h1 strong {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  #slogan p {
+    margin-top: 15px;
+  }
+</style>
+<div id="slogan">
+  <h1>
+    <%= config.company %>
+    <strong><%= config.author %></strong>
+  </h1>
+  <p>
+    14년 무사고ㆍ국내 업무실적 1위<br>
+    경쟁력 있는 평가금액으로 보답드립니다.
+  </p>
+</div>
+
+<style>
+  main {
+   margin: 0 auto; 
+  }
+  @media (min-width: 768px) {
+    main {
+      width: var(--container-width);
+    }
+  }
+</style>
+<main>
+  <style>
+    #services {
+      padding-bottom: 50px;
+      background-color: var(--color-off-white);
+    }
+    @media (min-width: 768px) {
+      #services {
+        background-color: var(--color-background);
+      }
+    }
+    #services header {
+      padding: 50px 0;
+      text-align: center;
+    }
+    #services header h2 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #services header p {
+      margin-top: 10px;
+    }
+    #services ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 0 20px;
+    }
+    #services li {
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+      list-style: none;
+      vertical-align: top;
+      transition: transform 0.2s ease;
+    }
+    #services li a {
+      display: block;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+    #services li figure {
+      overflow: hidden;
+      position: relative;
+      margin: 0;
+      padding-bottom: 100%;
+    }
+    #services li figure img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (min-width: 768px) {
+      #services ul {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin: 0;
+      }
+      #services li:hover {
+        transform: translateY(-5px);
+      }
+      #services li figure {
+        padding-bottom: 75%;
+      }
+    }
+    #services dl {
+      padding: 10px;
+    }
+    #services dt {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    #services dd {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+    @media (min-width: 768px) {
+      #services dl {
+        padding: 20px;
+      }
+      #services dt {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      #services dd {
+        font-size: 15px;
+      }
+    }
+  </style>
+  <div id="services">
+    <header>
+      <h2>업무영역</h2>
+      <p>
+        감정평가 · 세무 · 회계 · 법률 · 법무 · 특허<br>
+        각 분야 전문가와 함께 종합 솔루션을 제공합니다.
+      </p>
+    </header>
+    <ul>
+      <li>
+        <a href="/services">
+          <figure>
+            <img src="/images/fig-service-1.jpg" alt="">
+          </figure>
+          <dl>
+            <dt>보상</dt>
+            <dd>공공용지의 매수·수용 등 각종 공공사업과 관련된 평가</dd>
+          </dl>
+        </a>
+      </li>
+      <li>
+        <a href="/services">
+          <figure>
+            <img src="/images/fig-service-2.jpg" alt="">
+          </figure>
+          <dl>
+            <dt>재개발/재건축 관련</dt>
+            <dd>재개발 및 재건축 사업관련 평가, 중복 및 종후 자산평가, 분양가치 및 무가치 평가</dd>
+          </dl>
+        </a>
+      </li>
+      <li>
+        <a href="/services">
+          <figure>
+            <img src="/images/fig-service-3.jpg" alt="">
+          </figure>
+          <dl>
+            <dt>무형자산</dt>
+            <dd>영업권, 상표권, 특허권, 디자인권 등 산업 재산 관련 평가</dd>
+          </dl>
+        </a>
+      </li>
+      <li>
+        <a href="/services">
+          <figure>
+            <img src="/images/fig-service-4.jpg" alt="">
+          </figure>
+          <dl>
+            <dt>사업 타당성 검토 및 컨설팅</dt>
+            <dd>준공 후 가치평가, 사업의 타당성 검토</dd>
+          </dl>
+        </a>
+      </li>
+      <li>
+        <a href="/services">
+          <figure>
+            <img src="/images/fig-service-5.jpg" alt="">
+          </figure>
+          <dl>
+            <dt>자산재평가</dt>
+            <dd>자산재평가법에 의한 기업자산의 감정평가</dd>
+          </dl>
+        </a>
+      </li>
+      <li>
+        <a href="/services">
+          <figure>
+            <img src="/images/fig-service-6.jpg" alt="">
+          </figure>
+          <dl>
+            <dt>경매/소송</dt>
+            <dd>법원 및 한국자산관리공사에 제출용인 경·공매, 민형사 및 행정소송 등을 위한 감정평가</dd>
+          </dl>
+        </a>
+      </li>
+      <li>
+        <a href="/services">
+          <figure>
+            <img src="/images/fig-service-7.jpg" alt="">
+          </figure>
+          <dl>
+            <dt>담보</dt>
+            <dd>금융기관 담보물 평가, 기업체의 대리점 개설 및 관리를 위한 담보물 감정평가</dd>
+          </dl>
+        </a>
+      </li>
+      <li>
+        <a href="/services">
+          <figure>
+            <img src="/images/fig-service-8.jpg" alt="">
+          </figure>
+          <dl>
+            <dt>조세관련</dt>
+            <dd>토지에 관한 국세, 지방세 등 부과기준 가격산정을 위한 감정평가</dd>
+          </dl>
+        </a>
+      </li>
+    </ul>
+  </div>
+</main>
