@@ -3,6 +3,7 @@
 # ===============
 # Navigation menu
 menu:
+  홈: /
   하이테크감정평가법인: /about
   업무영역: /services
   평가사례: /cases

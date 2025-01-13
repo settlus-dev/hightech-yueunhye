@@ -12,6 +12,8 @@ input, button
     border: 0
     padding: 0
 
+html, body, #container
+  height: 100%
 
 body
   background: color-background
@@ -40,7 +42,8 @@ body
   position: relative
 
 #container-sticky
-  position fixed
+  z-index: 10
+  position absolute
   left: 0
   @media mq-normal
     left: 50%
