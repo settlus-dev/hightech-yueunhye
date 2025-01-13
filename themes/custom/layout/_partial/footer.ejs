@@ -1,14 +1,15 @@
 <footer id="footer">
-  <% if (theme.sidebar === 'bottom'){ %>
-    <%- partial('_partial/sidebar') %>
-  <% } %>
   <div class="outer">
     <div id="footer-info" class="inner">
-      <% if (theme.copyright){ %>
-        <%- render(theme.copyright, 'pug'); %>
-      <% } %>
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      <%= __('powered_by') %> <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <figure><img src="/images/logo-hightech-white.svg" height="70" alt="<%= config.company %>"></figure>
+      <address><%= config.address %></address>
+      <ul>
+        <li><strong>TEL</strong> <%= config.tel %></li>
+        <li><strong>FAX</strong> <%= config.fax %></li>
+        <li><strong>EMAIL</strong> <%= config.email %></li>
+      </ul>
+      Copyright &copy; <%= date(new Date(), 'YYYY') %>
+      <%= config.company || config.title %>. All rights reserved.
     </div>
   </div>
 </footer>

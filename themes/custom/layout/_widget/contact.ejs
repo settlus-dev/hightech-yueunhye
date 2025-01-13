@@ -1,0 +1,114 @@
+<style>
+.widget-contact {
+  padding: 0 20px 40px;
+  background: url(/images/bg-office.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .widget-contact {
+    border-radius: 10px;
+  }
+}
+.calculator {
+  padding: 60px 0;
+}
+.calculator-heading {
+  margin-bottom: 35px;
+  text-align: center;
+}
+.calculator-heading h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.calculator-heading small {
+  display: block;
+  opacity: 0.7;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.calculator-form {
+  position: relative;
+}
+.calculator-form + .calculator-form {
+  margin-top: 20px;
+}
+.calculator-form label {
+  display: block;
+  font-size: 15px;
+}
+.calculator-form input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 10px;
+  padding: 0 40px 0 0;
+  border: none;
+  background-color: rgba(35, 44, 58, 0.8);
+  box-sizing: border-box;
+  color: #fff;
+  text-align: right;
+}
+.calculator-form sub {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 20px;
+  line-height: 50px;
+}
+.contact-card {
+  display: block;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #6e7a8d;
+  background-color: #131c29;
+  color: #fff;
+  text-decoration: none;
+}
+.contact-card + .contact-card {
+  margin-top: 15px;
+}
+.contact-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.contact-card p {
+  margin-top: 12px;
+  line-height: 22px;
+}
+</style>
+
+<div class="widget-contact">
+  <div class="calculator">
+    <div class="calculator-heading">
+      <h3>감정평가 수수료 계산</h3>
+      <small>국토교통부 공고 제 2016-1220호</small>
+    </div>
+    <div class="calculator-form">
+      <label>
+        예상 감정평가액을 입력해주세요.
+        <input type="tel">
+        <sub>원</sub>
+      </label>
+    </div>
+    <div class="calculator-form">
+      <label>
+        예상 수수료 (VAT/실비 별도)
+        <input type="tel">
+        <sub>원</sub>
+      </label>
+    </div>
+  </div>
+  <a class="contact-card" href="tel:<%= config.tel %>">
+    <h3>전화 상담</h3>
+    <p>
+      <%= config.author %> <u><%= config.tel %></u><br>
+      빠르고 간편하게 상담이 가능합니다.
+    </p>
+  </a>
+  <a class="contact-card" href="tel:<%= config.tel %>">
+    <h3>카톡 상담</h3>
+    <p>1:1 채팅을 통해 상담 및 예약을 도와드립니다.</p>
+  </a>
+</div>

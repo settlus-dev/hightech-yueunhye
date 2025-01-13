@@ -33,11 +33,20 @@
   background-size: cover
   z-index: -1
 
+#banner:after
+  content: ""
+  position: absolute
+  right: 0
+  bottom: 0
+  left: 0
+  height: 100%
+  background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%)
+
 #header-title
   text-align: center
   height: logo-size
   position: absolute
-  top: 50%
+  top: 60%
   left: 0
   margin-top: logo-size * -0.5
 
@@ -69,12 +78,14 @@ $logo-text
 $nav-link
   float: left
   color: #fff
-  opacity: 0.6
+  opacity: 0.8
   text-decoration: none
   text-shadow: 0 1px rgba(0, 0, 0, 0.2)
   transition: opacity 0.2s
   display: block
+  margin-top: 10px
   padding: 20px 15px
+  font-size: 15px
   &:hover
     opacity: 1
 
@@ -88,9 +99,18 @@ $nav-link
   position: relative
   cursor: pointer
 
+#main-nav-menu
+  margin-top: 20px
+
+#main-nav-logo
+  float: left
+  margin-right: 40px
+  margin-left: 15px
+  @media mq-mobile
+    display: none
+
 .main-nav-link
   @extend $nav-link
-  font-weight: 300
   letter-spacing: 1px
   @media mq-mobile
     display: none

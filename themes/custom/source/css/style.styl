@@ -12,8 +12,6 @@ input, button
     border: 0
     padding: 0
 
-html, body, #container
-  height: 100%
 
 body
   background: color-background
@@ -40,6 +38,14 @@ body
 
 #container
   position: relative
+
+#container-sticky
+  position fixed
+  left: 0
+  @media mq-normal
+    left: 50%
+    width: 1260px
+    transform: translateX(-50%)
 
 .mobile-nav-on
   overflow: hidden

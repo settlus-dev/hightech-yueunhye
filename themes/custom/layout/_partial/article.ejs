@@ -10,7 +10,7 @@
         <%- partial('post/title', {class_name: 'p-name article-title'}) %>
       </header>
     <% } %>
-    <div class="e-content article-entry" itemprop="articleBody">
+    <article class="e-content article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
         <% if (theme.excerpt_link){ %>
@@ -21,7 +21,7 @@
       <% } else { %>
         <%- post.content %>
       <% } %>
-    </div>
+    </article>
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" data-title="<%= post.title %>" class="article-share-link"><span class="fa fa-share"><%= __('share') %></span></a>
       <% if (post.comments && theme.disqus_shortname){ %>

@@ -3,10 +3,13 @@
 # ===============
 # Navigation menu
 menu:
-  Home: /
-  Archives: /archives
-# RSS link
-rss: /atom.xml
+  하이테크감정평가법인: /about
+  업무영역: /services
+  평가사례: /cases
+  아티클: /articles
+  평가의뢰: /contact
+# RSS link (default: /atom.xml)
+rss:
 # Path of title banner image of page top
 banner: "images/banner.jpg"
 # Subtitle of page top
@@ -40,15 +43,16 @@ copyright:
 # ===============
 # Sidebar
 # ===============
-# Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
+# Sidebar style. You can choose `left`, `right` or `false`.
 sidebar: right
 # Widgets displaying in sidebar
 widgets:
-- category
-- tag
-- tagcloud
-- archive
-- recent_posts
+- contact
+# - category
+# - tag
+# - tagcloud
+# - archive
+# - recent_posts
 
 # ===============
 # Widget behavior
