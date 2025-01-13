@@ -71,6 +71,8 @@ google_analytics:
 gauges_analytics:
 # Favicon path
 favicon: /images/favicon.png
+# OpenGraph image
+image: /images/ogimage.jpg
 # Twitter ID
 twitter:
 fb_admins:
