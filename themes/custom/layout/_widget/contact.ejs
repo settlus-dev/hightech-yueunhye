@@ -50,6 +50,10 @@
   color: #fff;
   text-align: right;
 }
+.calculator-form input:focus {
+  border: 1px solid var(--color-highlight);
+  outline: none;
+}
 .calculator-form sub {
   position: absolute;
   right: 0;
@@ -95,7 +99,7 @@
     <div class="calculator-form">
       <label>
         예상 수수료 (VAT/실비 별도)
-        <input type="tel">
+        <input type="tel" disabled>
         <sub>원</sub>
       </label>
     </div>
