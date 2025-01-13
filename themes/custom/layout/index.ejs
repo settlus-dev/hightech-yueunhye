@@ -1,9 +1,36 @@
 <style>
   #hero {
-    height: 100vh;
-    background-color: #000;
+    position: relative;
+    height: 400px;
+    background: linear-gradient(0deg, #f3b926 0%, #ffd671 100%);
+  }
+  #hero figure {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  #hero figure img {
+    display: block;
+    width: 320px;
+    height: auto;
+  }
+  @media (min-width: 768px) {
+    #hero {
+      height: 100vh;
+      background: #e9ecf1;
+    }
+    #hero figure img {
+      display: block;
+      width: auto;
+      height: 700px;
+    }
   }
 </style>
 
 <div id="hero">
+  <figure>
+    <img src="/images/img-hero.png" alt="">
+  </figure>
 </div>
