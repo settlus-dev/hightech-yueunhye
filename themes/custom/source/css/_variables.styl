@@ -6,8 +6,11 @@ vendor-prefixes = webkit moz ms official
 color-default = #555
 color-grey = #999
 color-border = #ddd
+color-text = #000
 color-link = #258fb8
 color-background = #fff
+color-off-white = #e9ecf1
+color-highlight = #f3b926
 color-sidebar-text = #777
 color-widget-background = #ddd
 color-widget-border = #ccc
@@ -18,6 +21,26 @@ color-facebook = #3b5998
 color-pinterest = #cb2027
 color-linkedin = #0077B5
 
+// Colors (CSS native variables)
+:root
+  --color-default: color-default
+  --color-grey: color-grey
+  --color-border: color-border
+  --color-text: color-text
+  --color-link: color-link
+  --color-background: color-background
+  --color-off-white: color-off-white
+  --color-highlight: color-highlight
+  --color-sidebar-text: color-sidebar-text
+  --color-widget-background: color-widget-background
+  --color-widget-border: color-widget-border
+  --color-footer-background: color-footer-background
+  --color-mobile-nav-background: color-mobile-nav-background
+  --color-twitter: color-twitter
+  --color-facebook: color-facebook
+  --color-pinterest: color-pinterest
+  --color-linkedin: color-linkedin
+
 // Fonts
 font-sans = -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
@@ -26,7 +49,7 @@ font-sans = -apple-system, BlinkMacSystemFont,
 font-serif = Georgia, "Times New Roman", serif
 font-mono = "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
 font-icon = ForkAwesome
-font-size = 14px
+font-size = 15px
 line-height = 1.6em
 line-height-title = 1.1em
 
@@ -44,6 +67,10 @@ article-padding = 20px
 mobile-nav-width = 280px
 main-column = 9
 sidebar-column = 3
+
+// Layout (CSS native variables)
+:root
+  --container-width: 1150px
 
 if sidebar and sidebar isnt bottom
   _sidebar-column = sidebar-column
