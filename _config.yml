@@ -3,17 +3,23 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 하이테크감정평가법인 유은혜 본부장
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
-timezone: ''
+company: 하이테크감정평가법인
+author: 유은혜 본부장
+language: ko
+timezone: Asia/Seoul
+address: 서울특별시 강남구 영동대로 511 무역센터 13층 (삼성역)
+tel: 010-2965-1248
+fax: 02-6971-9586
+email: windy_u@hightechmember.com
+kakao: 
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://yueunhye.hightechapp.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
