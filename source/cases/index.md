@@ -1,5 +1,5 @@
 ---
-title: 평가의뢰
+title: 평가사례
 date: 2025-01-13 15:18:32
 cover: /images/banner.jpg
 ---
