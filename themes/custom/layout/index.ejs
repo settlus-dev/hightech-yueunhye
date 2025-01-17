@@ -266,4 +266,113 @@
       </li>
     </ul>
   </div>
+  
+  <style>
+    #cases {
+      margin: 40px 0;
+    }
+    #cases .slick-list.draggable {
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
+    }
+    #cases li {
+      list-style: none;
+      text-align: center;
+    }
+    #cases li a {
+      display: inline-block;
+    }
+    #cases li figure {
+      opacity: 0.5;
+      display: inline-block;
+      position: relative;
+      margin: 0;
+      border: 1px solid var(--color-border);
+      transition: all 0.2s ease;
+    }
+    #cases li.slick-center figure {
+      opacity: 1;
+      box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
+      transform: scale(1.1);
+    }
+    #cases li figcaption {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      transform: translateY(-50%);
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: 20px;
+    }
+    #cases li img {
+      width: 200px;
+      margin: 0 auto;
+    }
+    #cases .more {
+      text-align: center;
+    }
+    #cases .more a {
+      color: var(--color-grey);
+    }
+  </style>
+  <section id="cases">
+    <ul>
+      <!--  -->
+    </ul>
+    <div class="more">
+      <a href="/cases">더보기 +</a>
+    </div>
+  </section>
+  <script>
+    axios.get('https://7q4yn3iplb.execute-api.ap-northeast-2.amazonaws.com/rss/ulive_')
+      .then(function (response) {
+        const posts = response.data;
+        const cases = posts.filter(function (post) {
+          return (post.category === '평가사례');
+        });
+        cases.forEach(function (item) {
+          const {title, guid} = item;
+          const postId = guid.split('/')[guid.split('/').length-1];
+          $('#cases ul').append($(`
+            <li>
+              <a href="/cases/detail/?postId=${postId}">
+                <figure>
+                  <img src="/images/fig-report-form.png" alt="">
+                  <figcaption>${title}</figcaption>
+                </figure>
+              </a>
+            </li>
+          `));
+        });
+
+        // Slick
+        $('#cases ul').slick({
+          centerMode: true,
+          centerPadding: '60px',
+          slidesToShow: 1,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '15%',
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      })
+  </script>
 </main>
