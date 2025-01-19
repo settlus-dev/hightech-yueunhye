@@ -1,0 +1,59 @@
+<article class="article-entry" itemprop="articleBody">
+  <%- page.content %>
+</article>
+
+<style>
+  #cases {
+    padding: 0 0 50px;
+  }
+  #cases ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #cases li {
+    float: left;
+    list-style: none;
+  }
+  #cases li:nth-child(2n+1) {
+    width: 48%;
+  }
+  #cases li:nth-child(2n) {
+    width: 48%;
+    margin-left: 4%;
+  }
+  #cases li a {
+    display: block;
+  }
+  @media (min-width: 768px) {
+    #cases li {
+      width: 33.33%;
+    }
+  }
+</style>
+<section id="cases">
+  <ul>
+    <!--  -->
+  </ul>
+</section>
+<script>
+  axios.get('https://7q4yn3iplb.execute-api.ap-northeast-2.amazonaws.com/rss/ulive_').then(function (response) {
+    const posts = response.data;
+    const cases = posts.filter(function (post) {
+      return (post.category === '평가사례');
+    });
+    cases.forEach(function (item) {
+      const {title, guid} = item;
+      const postId = guid.split('/')[guid.split('/').length-1];
+      const $template = $(`
+        <li>
+          <a href="/cases/case/?postId=${postId}"></a>
+        </li>
+      `);
+      const $reportSheet = $(`<%- partial('_partial/report-sheet') %>`);
+      $reportSheet.find('figcaption').text(title);
+      $template.find('a').append($reportSheet);
+      $('#cases ul').append($template);
+    });
+  });
+</script>

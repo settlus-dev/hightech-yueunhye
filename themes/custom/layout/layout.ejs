@@ -2,7 +2,19 @@
 <html>
 <%- partial('_partial/head') %>
 <body>
-  <% if (page.layout === 'page') { %>
+  <% if (!page.layout) { %>
+    <div id="container">
+      <div id="wrap">
+        <div id="container-sticky">
+          <%- partial('_partial/header-outer') %>
+        </div>
+        <%- body %>
+        <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+      </div>
+      <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+      <%- partial('_partial/after-footer') %>
+    </div>
+  <% } else { %>
     <div id="container">
       <div id="wrap">
         <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
@@ -12,18 +24,6 @@
             <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
           <% } %>
         </div>
-        <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
-      </div>
-      <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
-      <%- partial('_partial/after-footer') %>
-    </div>
-  <% } else { %>
-    <div id="container">
-      <div id="wrap">
-        <div id="container-sticky">
-          <%- partial('_partial/header-outer') %>
-        </div>
-        <%- body %>
         <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
       </div>
       <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
