@@ -105,11 +105,12 @@
     #services li {
       overflow: hidden;
       border-radius: 10px;
+      border: 1px solid var(--color-border);
       background-color: #fff;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.2);
       list-style: none;
       vertical-align: top;
-      transition: transform 0.2s ease;
+      transition: all 0.2s ease;
     }
     #services li a {
       display: block;
@@ -137,6 +138,7 @@
         margin: 0;
       }
       #services li:hover {
+        box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
         transform: translateY(-5px);
       }
       #services li figure {
