@@ -4,10 +4,17 @@ date: 2025-01-17 23:55:52
 ---
 
 <style>
+  #loading {
+    margin: 100px 0;
+    text-align: center;
+  }
   p.se-text-paragraph {
     margin: 0;
   }
 </style>
+<div id="loading">
+  <img src="/images/ui-loading.svg" width="100" alt="">
+</div>
 <div id="smarteditor-view">
   <!--  -->
 </div>
@@ -21,5 +28,8 @@ date: 2025-01-17 23:55:52
       $('#smarteditor-view').append(`<h2>${title}</h2>`);
       $('#smarteditor-view').append(`<hr>`);
       $('#smarteditor-view').append(content);
-    });
+    })
+    .finally((function () {
+      $('#loading').remove();
+    }));
 </script>
