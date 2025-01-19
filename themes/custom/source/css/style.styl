@@ -22,9 +22,10 @@ body
 
 .outer
   clearfix()
-  max-width: (column-width + gutter-width) * columns + gutter-width
   margin: 0 auto
-  padding: 0 gutter-width
+  padding: 0
+  @media mq-normal
+    width: column-width * columns
 
 .inner
   column(columns)
@@ -67,13 +68,18 @@ body
 
 if sidebar and sidebar isnt bottom
   #main
+    padding: 0 gutter-width
     @media mq-normal
-      column(main-column)
+      float: left
+      width: column-width * main-column
+      padding: 0 gutter-width 0 0
+      box-sizing: border-box
 
 if sidebar is left
   @media mq-normal
     #main
       float: right
+      padding: 0 0 0 gutter-width
 
 @import "_extend"
 @import "_partial/header"
