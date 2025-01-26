@@ -1,6 +1,7 @@
 ---
 title: 업무영역
 date: 2025-01-13 15:18:38
+banner: images/bg-services.jpg
 ---
 
 # 감정평가법인의 업무 영역

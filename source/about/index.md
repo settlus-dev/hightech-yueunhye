@@ -1,7 +1,7 @@
 ---
 title: 하이테크감정평가법인
 date: 2025-01-13 11:11:42
-cover: /images/banner.jpg
+banner: images/bg-about.jpg
 ---
 
 # 감정평가법인, 당신의 자산 가치를 지켜드립니다.

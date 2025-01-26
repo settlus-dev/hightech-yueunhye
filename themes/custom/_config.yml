@@ -12,7 +12,7 @@ menu:
 # RSS link (default: /atom.xml)
 rss:
 # Path of title banner image of page top
-banner: "images/banner.jpg"
+banner: "images/bg-default.jpg"
 # Subtitle of page top
 subtitle:
 # Header links with icon, specified links will appear at the top right corner of the page
