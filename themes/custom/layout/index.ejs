@@ -268,38 +268,99 @@
   
   <style>
     #cases {
-      margin: 40px 0;
+      margin: 0 0 40px;
     }
-    #cases .slick-list.draggable {
-      padding-top: 40px !important;
-      padding-bottom: 40px !important;
+    #cases header {
+      padding: 50px 0;
+      text-align: center;
     }
-    #cases li {
-      list-style: none;
+    #cases header h2 {
+      font-size: 22px;
+      font-weight: bold;
     }
-    #cases li a {
-      display: block;
-      width: 200px;
-      margin: 0 auto;
-    }
-    #cases li figure.report-sheet {
-      opacity: 0.5;
-      transition: all 0.2s ease;
-    }
-    #cases li.slick-center figure.report-sheet {
-      opacity: 1;
-      box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
-      transform: scale(1.1);
+    #cases header p {
+      margin-top: 10px;
     }
     #cases .more {
+      margin-top: 20px;
       text-align: center;
     }
     #cases .more a {
       color: var(--color-grey);
     }
+    #cases-carousel .slick-list.draggable {
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
+    }
+    #cases-carousel li {
+      list-style: none;
+    }
+    #cases-carousel li a {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+    }
+    #cases-carousel li figure.report-sheet {
+      opacity: 0.5;
+      transition: all 0.2s ease;
+    }
+    #cases-carousel li.slick-center figure.report-sheet {
+      opacity: 1;
+      box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
+      transform: scale(1.1);
+    }
+    #cases-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    #cases-list li {
+      list-style: none;
+      align-self: start;
+    }
+    #cases-list li a {
+      display: block;
+    }
+    @media (min-width: 768px) {
+      #cases-list {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      #cases-list li {
+        transition: all 0.2s ease;
+      }
+      #cases-list li:hover {
+        box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
+        transform: translateY(-5px);
+      }
+    }
+    /* 반응형 보기 */
+    #cases-carousel {
+      display: block;
+    }
+    #cases-list {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      #cases-carousel {
+        display: none;
+      }
+      #cases-list {
+        display: grid;
+      }
+    }
   </style>
   <section id="cases">
-    <ul>
+    <header>
+      <h2>평가사례</h2>
+      <p>
+        감정평가 · 세무 · 회계 · 법률 · 법무 · 특허<br>
+        각 분야 전문가와 함께 종합 솔루션을 제공합니다.
+      </p>
+    </header>
+    <ul id="cases-carousel">
+      <!--  -->
+    </ul>
+    <ul id="cases-list">
       <!--  -->
     </ul>
     <div class="more">
@@ -323,11 +384,12 @@
         const $reportSheet = $(`<%- partial('_partial/report-sheet') %>`);
         $reportSheet.find('figcaption').text(title);
         $template.find('a').append($reportSheet);
-        $('#cases ul').append($template);
+        $template.clone().appendTo('ul#cases-carousel');
+        $template.clone().appendTo('ul#cases-list');
       });
 
       // Slick
-      $('#cases ul').slick({
+      $('ul#cases-carousel').slick({
         centerMode: true,
         centerPadding: '60px',
         slidesToShow: 1,

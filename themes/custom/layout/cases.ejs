@@ -10,43 +10,28 @@
   #cases {
     padding: 0 0 50px;
   }
-  #cases ul:after {
-    content: "";
-    display: block;
-    clear: both;
+  #cases ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
   #cases li {
-    float: left;
     list-style: none;
-  }
-  #cases li:nth-child(2n+1) {
-    width: 48%;
-  }
-  #cases li:nth-child(2n) {
-    width: 48%;
-    margin-left: 4%;
+    align-self: start;
   }
   #cases li a {
     display: block;
   }
   @media (min-width: 768px) {
+    #cases ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
     #cases li {
       transition: all 0.2s ease;
     }
     #cases li:hover {
       box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
       transform: translateY(-5px);
-    }
-    #cases li:nth-child(2n+1) {
-      width: 31%;
-    }
-    #cases li:nth-child(2n) {
-      width: 31%;
-      margin-left: 3.5%;
-    }
-    #cases li:nth-child(3n) {
-      width: 31%;
-      margin-left: 3.5%;
     }
   }
 </style>
