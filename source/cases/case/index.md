@@ -1,6 +1,7 @@
 ---
 title: 평가사례
 date: 2025-01-17 23:55:52
+banner: images/bg-cases.jpg
 ---
 
 <style>

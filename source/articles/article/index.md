@@ -1,6 +1,7 @@
 ---
 title: 아티클
 date: 2025-01-20 02:27:30
+banner: images/bg-articles.jpg
 ---
 
 <style>
