@@ -39,6 +39,19 @@ body
 .clear
   clear: both
 
+.only-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .only-mobile {
+    display: none;
+  }
+  .only-desktop {
+    display: initial;
+  }
+}
+
 #container
   position: relative
 
