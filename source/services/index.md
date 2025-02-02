@@ -62,4 +62,3 @@ banner: images/bg-services.jpg
 저희 감정평가법인은 고객의 다양한 요구를 충족시키기 위해 최신 시장 데이터를 기반으로 정밀한 평가를 제공하며, 공정성과 투명성을 바탕으로 신뢰받는 서비스를 제공합니다. -->
 
 ![](/images/fig-services.png)
-![](/images/fig-namecard.jpg)

@@ -19,8 +19,9 @@
   @media (min-width: 768px) {
     #hero {
       height: 100vh;
+      min-height: 700px;
       padding: 0;
-      background: linear-gradient(0deg, var(--color-off-white) 70%, var(--color-grey) 100%);
+      /* background: linear-gradient(0deg, var(--color-off-white) 70%, var(--color-grey) 100%); */
     }
     #hero figure img {
       width: auto;
@@ -108,8 +109,8 @@
           전화 상담
         </h3>
         <p>
-          <%= config.author %><br>
-          <u><%= config.tel %></u>
+          <u><%= config.tel %></u><br>
+          <%= config.author %>
         </p>
       </a>
       <a class="contact-card" href="<%= config.kakao %>" target="_blank">
@@ -119,7 +120,7 @@
         </h3>
         <p>
           1:1 채팅을 통해<br>
-          상담 및 예약을 도와드립니다.
+          전용 상담을 받으세요.
         </p>
       </a>
     </div>
@@ -477,9 +478,6 @@
         $reportSheet.find('figcaption').text(title);
         $template.find('a').append($reportSheet);
         $template.clone().appendTo('ul#cases-carousel');
-        $template.clone().appendTo('ul#cases-list');
-        $template.clone().appendTo('ul#cases-list');
-        $template.clone().appendTo('ul#cases-list');
         $template.clone().appendTo('ul#cases-list');
       });
 

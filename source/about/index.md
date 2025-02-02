@@ -46,7 +46,3 @@ banner: images/bg-about.jpg
 저희 감정평가법인은 앞으로도 당신의 자산 가치를 지키고, 더 나아가 그 가치를 키워갈 수 있는 든든한 동반자가 되겠습니다.
 
 감사합니다.
-
----
-
-![](/images/fig-namecard.jpg)
