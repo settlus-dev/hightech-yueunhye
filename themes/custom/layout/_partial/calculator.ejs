@@ -59,15 +59,101 @@
   <div class="calculator-form">
     <label>
       예상 감정평가액을 입력해주세요.
-      <input type="tel">
+      <input id="amount-input" type="tel">
       <sub>원</sub>
     </label>
   </div>
   <div class="calculator-form">
     <label>
       예상 수수료 (VAT/실비 별도)
-      <input type="tel" disabled>
+      <input id="fee-output" type="tel" disabled>
       <sub>원</sub>
     </label>
   </div>
 </div>
+
+<script>
+  var $amountInput = $('#amount-input');
+  var $feeOutput = $('#fee-output');
+
+  function formatNumberWithCommas(str) {
+    str = str.replace(/[^\d]/g, '');
+    if (!str) return '';
+    return parseInt(str, 10).toLocaleString('ko-KR');
+  }
+
+  function handleInputChange() {
+    var rawValue = $amountInput.val().replace(/[^\d]/g, '');
+    var amount = parseInt(rawValue, 10) || 0;
+    var fee = getAppraisalFee(amount);
+    $amountInput.val(formatNumberWithCommas(rawValue));
+    $feeOutput.val(fee.toLocaleString('ko-KR'));
+  }
+
+  function handleKeyDown(e) {
+    var allowedKeys = ['Backspace','Delete','ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End','Tab'];
+    var isNumberKey = /^[0-9]$/.test(e.key);
+    var isAllowedKey = allowedKeys.indexOf(e.key) !== -1;
+    if (!isNumberKey && !isAllowedKey) e.preventDefault();
+  }
+
+  // keydown 에서 숫자 이외 입력 방지 + input/keyup 에서 콤마/수수료 갱신
+  $amountInput.on('keydown input keyup', function(e) {
+    if (e.type === 'keydown') {
+      handleKeyDown(e);
+    } else {
+      handleInputChange();
+    }
+  });
+</script>
+
+<script>
+  /**
+   * 감정평가액(원 단위) 입력 시, 표에 따른 수수료를 반환하는 함수
+   * @param {number} amount 감정평가액(원)
+   * @returns {number} 계산된 수수료(원)
+   */
+  function getAppraisalFee(amount) {
+    let fee = 0;
+
+    if (amount <= 0) {
+      // 잘못된 입력이거나 0 이하인 경우, 0원 처리 (필요시 별도 처리 가능)
+      return 0;
+    } else if (amount <= 50_000_000) {
+      // 5천만원 이하
+      fee = 200_000;
+    } else if (amount <= 500_000_000) {
+      // 5천만원 초과 ~ 5억원 이하
+      fee = 200_000 + (amount - 50_000_000) * (11 / 10_000);
+    } else if (amount <= 1_000_000_000) {
+      // 5억원 초과 ~ 10억원 이하
+      fee = 695_000 + (amount - 500_000_000) * (9 / 10_000);
+    } else if (amount <= 5_000_000_000) {
+      // 10억원 초과 ~ 50억원 이하
+      fee = 1_145_000 + (amount - 1_000_000_000) * (8 / 10_000);
+    } else if (amount <= 10_000_000_000) {
+      // 50억원 초과 ~ 100억원 이하
+      fee = 4_345_000 + (amount - 5_000_000_000) * (7 / 10_000);
+    } else if (amount <= 50_000_000_000) {
+      // 100억원 초과 ~ 500억원 이하
+      fee = 7_845_000 + (amount - 10_000_000_000) * (6 / 10_000);
+    } else if (amount <= 100_000_000_000) {
+      // 500억원 초과 ~ 1,000억원 이하
+      fee = 31_845_000 + (amount - 50_000_000_000) * (5 / 10_000);
+    } else if (amount <= 300_000_000_000) {
+      // 1,000억원 초과 ~ 3,000억원 이하
+      fee = 56_845_000 + (amount - 100_000_000_000) * (4 / 10_000);
+    } else if (amount <= 600_000_000_000) {
+      // 3,000억원 초과 ~ 6,000억원 이하
+      fee = 136_845_000 + (amount - 300_000_000_000) * (3 / 10_000);
+    } else if (amount <= 1_000_000_000_000) {
+      // 6,000억원 초과 ~ 1조 이하
+      fee = 226_845_000 + (amount - 600_000_000_000) * (2 / 10_000);
+    } else {
+      // 1조 초과
+      fee = 306_845_000 + (amount - 1_000_000_000_000) * (1 / 10_000);
+    }
+    // 일반적으로 원단위로 내림(정수화)하는 경우가 많으므로 Math.floor 적용
+    return Math.floor(fee);
+  }
+</script>
