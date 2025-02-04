@@ -1,0 +1,59 @@
+<style>
+  #cases-latest {
+    padding-top: 15px;
+  }
+  #cases-latest h2 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  #cases-latest ul {
+    margin-top: 15px;
+  }
+  #cases-latest li + li {
+    margin-top: 10px;
+  }
+  #cases-latest li {
+    overflow: hidden;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  #cases-latest li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #cases-latest li a:hover {
+    text-decoration: underline;
+  }
+  #cases-latest + .contact-types {
+    margin-top: 20px;
+  }
+</style>
+
+<div id="cases-latest">
+  <h2>최근 평가 사례</h2>
+  <ul>
+    <!-- 최근 3개 까지만 -->
+    <li>&nbsp;</li>
+    <li>&nbsp;</li>
+    <li>&nbsp;</li>
+  </ul>
+</div>
+
+<script>
+  axios.get('https://7q4yn3iplb.execute-api.ap-northeast-2.amazonaws.com/rss/ulive_')
+    .then(function (response) {
+      const posts = response.data;
+      const cases = posts.filter(function (post) {
+        return (post.category === '평가사례');
+      });
+      const latestCases = cases.splice(0, 3); // 최근 3개 까지만
+      latestCases.forEach(function (item, index) {
+        const {title, guid} = item;
+        const postId = guid.split('/')[guid.split('/').length-1];
+        const $template = $(`<a href="/cases/case/?postId=${postId}">${title}</a>`);
+        $(`#cases-latest ul li:nth-child(${index + 1})`).append('· ');
+        $(`#cases-latest ul li:nth-child(${index + 1})`).append($template);
+      });
+    });
+</script>

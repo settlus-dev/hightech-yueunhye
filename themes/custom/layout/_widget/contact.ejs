@@ -1,120 +1,49 @@
 <style>
-.widget-contact {
-  position: relative;
-  padding: 20px 20px;
-  background: url(/images/bg-office.jpg) no-repeat 50% 50%;
-  background-size: cover;
-  color: #fff;
-}
-@media (min-width: 768px) {
-  .widget-contact {
-    border-radius: 10px;
+  #widget-contact {
+    position: relative;
+    padding: 20px 20px;
+    background: url(/images/bg-office.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    color: #fff;
   }
-}
-.widget-contact .bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.widget-contact .bg:after {
-  opacity: 0.9;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-footer-background);
-}
-.widget-contact .bg video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.widget-contact .contact-us {
-  position: relative;
-  padding-top: 15px;
-}
-.widget-contact .contact-us h2 {
-  font-size: 22px;
-  font-weight: bold;
-}
-.widget-contact .contact-us ul {
-  margin-top: 15px;
-}
-.widget-contact .contact-us li + li {
-  margin-top: 10px;
-}
-.widget-contact .contact-us li {
-  overflow: hidden;
-  font-size: 14px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.widget-contact .contact-us li a {
-  color: #fff;
-  text-decoration: none;
-}
-.widget-contact .contact-us li a:hover {
-  text-decoration: underline;
-}
-.widget-contact .contact-us + .contact-types {
-  margin-top: 20px;
-}
-.widget-contact .contact-types li + li {
-  margin-top: 15px;
-}
+  @media (min-width: 768px) {
+    #widget-contact {
+      overflow: hidden;
+      border-radius: 10px;
+    }
+  }
+  #widget-contact #video-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  #widget-contact .container {
+    position: relative;
+  }
+  #widget-contact .contact-types {
+    margin-top: 20px;
+  }
+  #widget-contact .contact-types li + li {
+    margin-top: 15px;
+  }
 </style>
 
-<div class="widget-contact">
-  <div class="bg">
-    <video autoplay loop muted playsinline>
-      <source src="/videos/bg-meeting.mp4" type="video/mp4" />
-    </video>
-  </div>
-  <!-- <hr>
-  <%- partial('../_partial/calculator', {type: 'online'}) %>
-  <hr> -->
-  <div class="contact-us">
-    <h2>최근 평가 사례</h2>
-    <ul id="cases-latest">
-      <li>&nbsp;</li>
-      <li>&nbsp;</li>
-      <li>&nbsp;</li>
+<div id="widget-contact">
+  <%- partial('../_partial/video-cover') %>
+  <div class="container">
+    <%- partial('../_partial/cases-latest') %>
+    <ul class="contact-types">
+      <li>
+        <%- partial('../_partial/contact-card', {type: 'online'}) %>
+      </li>
+      <li>
+        <%- partial('../_partial/contact-card', {type: 'kakao'}) %>
+      </li>
+      <li>
+        <%- partial('../_partial/contact-card', {type: 'phone'}) %>
+      </li>
     </ul>
   </div>
-  <ul class="contact-types">
-    <li>
-      <%- partial('../_partial/contact-card', {type: 'online'}) %>
-    </li>
-    <li>
-      <%- partial('../_partial/contact-card', {type: 'kakao'}) %>
-    </li>
-    <li>
-      <%- partial('../_partial/contact-card', {type: 'phone'}) %>
-    </li>
-  </ul>
 </div>
-
-<script>
-  axios.get('https://7q4yn3iplb.execute-api.ap-northeast-2.amazonaws.com/rss/ulive_')
-    .then(function (response) {
-      const posts = response.data;
-      const cases = posts.filter(function (post) {
-        return (post.category === '평가사례');
-      });
-      const latestCases = cases.splice(0, 3); // 최근 3개 까지만
-      latestCases.forEach(function (item, index) {
-        const {title, guid} = item;
-        const postId = guid.split('/')[guid.split('/').length-1];
-        const $template = $(`<a href="/cases/case/?postId=${postId}">${title}</a>`);
-        $(`ul#cases-latest li:nth-child(${index + 1})`).append('· ');
-        $(`ul#cases-latest li:nth-child(${index + 1})`).append($template);
-      });
-    });
-</script>
