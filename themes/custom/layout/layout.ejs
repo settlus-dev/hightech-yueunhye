@@ -18,7 +18,7 @@
   <% } else { %>
     <div id="container">
       <div id="wrap">
-        <%- partial('_partial/header', {cover: page.banner}) %>
+        <%- partial('_partial/header', {title: page.title, banner: page.banner}) %>
         <div class="outer">
           <section id="main">
             <%- body %>

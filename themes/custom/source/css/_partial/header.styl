@@ -32,8 +32,20 @@
   background: url(banner-url) center #000
   background-size: cover
   z-index: -1
+  h1
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    margin: 0
+    color: #fff
+    font-size: 22px
+    letter-spacing: 2px
+    white-space: nowrap
+    @media mq-normal
+      display: none
 
-#banner:after
+#banner:before
   content: ""
   position: absolute
   right: 0
