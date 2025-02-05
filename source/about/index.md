@@ -34,15 +34,49 @@ banner: images/bg-about.jpg
 
 ---
 
-## 당신 곁에 머무르겠습니다
+<style>
+  #on-your-side {
+    display: flex;
+  }
+  #on-your-side > .col {
+    flex: 1;
+  }
+  #on-your-side figure {
+    height: 100%;
+    margin: 0;
+    /* 수직 하단 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  #on-your-side figure img {
+    filter: grayscale(1);
+    vertical-align: bottom;
+  }
+</style>
 
-감정평가는 단순히 수치를 산출하는 일이 아닙니다.  
-그것은 신뢰를 쌓고, 소중한 결정을 함께 만들어가는 과정입니다.  
-저희는 고객 한 분 한 분과 소통하며, 그들의 입장에서 문제를 해결할 수 있는 실질적 해법을 제시하고자 노력합니다.
-
-> "공정성과 전문성을 바탕으로 한 가치 평가"는 저희의 철학입니다.  
-> 이 철학은 단순히 업무의 방식이 아니라, 고객의 삶에 진심으로 기여하고자 하는 저희의 태도이기도 합니다.
-
-저희 감정평가법인은 앞으로도 당신의 자산 가치를 지키고, 더 나아가 그 가치를 키워갈 수 있는 든든한 동반자가 되겠습니다.
-
-감사합니다.
+<div id="on-your-side">
+  <div class="col">
+    <h2>당신 곁에 머무르겠습니다.</h2>
+    <p>
+      감정평가는 단순히 수치를 산출하는 일이 아닙니다.<br>
+      그것은 신뢰를 쌓고, 소중한 결정을 함께 만들어가는 과정입니다.<br>
+      저희는 고객 한 분 한 분과 소통하며, 그들의 입장에서 문제를 해결할 수 있는 실질적 해법을 제시하고자 노력합니다.
+    </p>
+    <blockquote>
+      "공정성과 전문성을 바탕으로 한 가치 평가"는 저희의 철학입니다.<br>
+      이 철학은 단순히 업무의 방식이 아니라, 고객의 삶에 진심으로 기여하고자 하는 저희의 태도이기도 합니다.
+    </blockquote>
+    <p>
+      저희 감정평가법인은 앞으로도 당신의 자산 가치를 지키고, 더 나아가 그 가치를 키워갈 수 있는 든든한 동반자가 되겠습니다.
+    </p>
+    <p>
+      감사합니다.
+    </p>
+  </div>
+  <div class="col">
+    <figure>
+      <img src="/images/fig-hero.png" width="100%" alt="">
+    </figure>
+  </div>
+</div>
