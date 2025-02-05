@@ -1,0 +1,21 @@
+<style>
+  #google-form {
+    overflow: hidden;
+  }
+  /* 구글폼 양식 좌/우 여백이 5% 있기 때문에, 이를 상쇄하는 컨테이너를 만든 컴포넌트로 사용합니다. */
+  #google-form iframe {
+    width: 110%;
+    height: 1800px;
+    margin: -12px -5% 0;
+  }
+</style>
+
+<div id="google-form">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSduSLxqeRPrk--e5mEB5DoJloYA7pas87gU3lIVjdcpqGePog/viewform?embedded=true"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0">
+    로드 중…
+  </iframe>
+</div>
