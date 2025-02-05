@@ -37,6 +37,12 @@ banner: images/bg-about.jpg
 <style>
   #on-your-side {
     display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 768px) {
+    #on-your-side {
+      flex-direction: row;
+    }
   }
   #on-your-side > .col {
     flex: 1;
