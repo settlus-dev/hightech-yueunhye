@@ -4,61 +4,173 @@ date: 2025-01-13 15:18:38
 banner: images/bg-services.jpg
 ---
 
-<!-- # 감정평가법인의 업무 영역
+# 감정평가법인의 업무 영역
 
 저희 감정평가법인은 다양한 자산의 가치를 객관적이고 공정하게 평가하여 고객의 재산권 보호와 합리적인 의사결정을 지원합니다. 아래는 주요 업무 영역입니다.
 
----
+<style>
+  #services {
+    margin: 0;
+    padding-bottom: 100px;
+  }
+  #services li {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+  }
+  @media (min-width: 768px) {
+    #services li {
+      flex-direction: row;
+    }
+  }
+  #services li + li {
+    margin-top: 15px;
+    padding: 15px 0;
+    border-top: 1px solid var(--color-border);
+  }
+  #services li figure {
+    margin: 0;
+  }
+  #services li figure img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  @media (min-width: 768px) {
+    #services li figure img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  #services li > dl {
+    flex: 1;
+    margin: 0;
+  }
+  #services li dt {
+    font-size: 20px;
+  }
+  #services li dd {
+    margin-top: 10px;
+  }
+  #services u {
+    display: inline;
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 900;
+    text-underline-offset: 8px;
+    /* 수직 하단 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+</style>
 
-## 1. 주택 평가
-- **설명**: 주택의 시장가치 산정을 통해 매매, 담보 대출, 상속·증여 등 다양한 상황에 필요한 정보를 제공합니다.
-- **대상**: 아파트, 단독주택, 다세대·다가구 등 주거용 부동산.
-
----
-
-## 2. 상가 및 오피스 평가
-- **설명**: 상업용 부동산의 매매, 임대차, 투자 가치 분석 등을 위한 평가를 수행합니다.
-- **대상**: 상가 건물, 오피스 빌딩, 복합 상업시설 등.
-
----
-
-## 3. 공장 및 토지 평가
-- **설명**: 공장 시설 및 토지의 시장가치를 산정하여 산업 개발, 담보 대출, 매매 등을 지원합니다.
-- **대상**: 공장 건물, 산업단지 내 부지, 일반 토지 등.
-
----
-
-## 4. 절세 목적 평가
-- **설명**: 상속·증여세 신고 시 적정 과세를 위한 자산 가치를 평가하여 절세를 돕습니다.
-- **활용 사례**: 상속세 절세 전략, 증여세 신고, 재산 분할 등.
-
----
-
-## 5. 소송 평가
-- **설명**: 법적 분쟁에서 객관적인 자산 가치를 산출하여 소송 과정에서 신뢰할 수 있는 근거를 제공합니다.
-- **대상**: 재산 분할, 손해배상, 담보권 실행 등.
-
----
-
-## 6. 컨설팅
-- **설명**: 기업 및 개인의 자산 관리와 투자 의사결정을 돕기 위해 평가 및 관련 컨설팅 서비스를 제공합니다.
-- **대상**: 부동산 투자, 자산 재구성, 기업 인수합병(M&A) 등.
-
----
-
-## 7. 무형자산 평가
-- **설명**: 특허권, 상표권, 기술 등 무형 자산의 가치를 산정하여 기업 간 거래나 투자 의사결정을 지원합니다.
-- **대상**: 기술 특허, 브랜드 가치, 라이선스 계약 등.
-
----
-
-## 8. 보상 평가
-- **설명**: 공공사업과 관련된 보상금 산정을 통해 공정한 보상 절차를 지원합니다.
-- **대상**: 토지 수용, 도시 재개발, 공익사업 등에 따른 보상금 평가.
-
----
-
-## 신뢰와 전문성을 기반으로
-저희 감정평가법인은 고객의 다양한 요구를 충족시키기 위해 최신 시장 데이터를 기반으로 정밀한 평가를 제공하며, 공정성과 투명성을 바탕으로 신뢰받는 서비스를 제공합니다. -->
-
-![](/images/fig-services.png)
+<ul id="services">
+  <li>
+    <figure>
+      <img src="/images/fig-service-7.jpg" alt="">
+    </figure>
+    <dl>
+      <dt>상속&증여등기</dt>
+      <dd>
+        전문적인 상속 절차 지원<br>
+        신속한 등기 처리<br>
+        법적 리스크 최소화<br>
+        경쟁력 있는 비용 제공
+      </dd>
+    </dl>
+    <u>20년 경력, 고품질 & 경쟁력 있는 비용</u>
+  </li>
+  <li>
+    <figure>
+      <img src="/images/fig-service-8.jpg" alt="">
+    </figure>
+    <dl>
+      <dt>기업신용평가 등급개선</dt>
+      <dd>
+        기업 신용등급 분석<br>
+        등급 개선 전략 수립<br>
+        성과 중심의 컨설팅<br>
+        100% 성공보수 보장
+      </dd>
+    </dl>
+    <u>14년 경력, 실비개념 100% 성공보수</u>
+  </li>
+  <li>
+    <figure>
+      <img src="/images/fig-service-2.jpg" alt="">
+    </figure>
+    <dl>
+      <dt>보험상품평가</dt>
+      <dd>
+        다양한 보험 상품 비교 분석<br>
+        맞춤형 상품 추천<br>
+        리스크 관리 지원<br>
+        신뢰할 수 있는 평가 기준
+      </dd>
+    </dl>
+    <u>독보적 독점적 1위</u>
+  </li>
+  <li>
+    <figure>
+      <img src="/images/fig-service-4.jpg" alt="">
+    </figure>
+    <dl>
+      <dt>특수소송평가 (하이테크 전용)</dt>
+      <dd>
+        지적재산권 전문 평가<br>
+        복잡한 부실채권 관리<br>
+        전략적 변론 지원<br>
+        하이테크 기업 특화 서비스
+      </dd>
+    </dl>
+    <u>지적재산권, 부실채권, 변론목적 평가</u>
+  </li>
+  <li>
+    <figure>
+      <img src="/images/fig-service-6.jpg" alt="">
+    </figure>
+    <dl>
+      <dt>절세목적 상속증여평가</dt>
+      <dd>
+        절세를 위한 전략적 평가<br>
+        법적 절차의 완벽한 지원<br>
+        신뢰할 수 있는 데이터 분석<br>
+        무사고 기록으로 입증된 신뢰성
+      </dd>
+    </dl>
+    <u>경쟁력 있는 평가금액, 14년 무사고 기록</u>
+  </li>
+  <li>
+    <figure>
+      <img src="/images/fig-service-5.jpg" alt="">
+    </figure>
+    <dl>
+      <dt>부동산대출 담보평가</dt>
+      <dd>
+        대출을 위한 정확한 평가<br>
+        무료 가평가 서비스 제공<br>
+        신속한 평가 결과 제공<br>
+        금융기관 신뢰도 높은 평가
+      </dd>
+    </dl>
+    <u>대출을 위한 무료 가평가 제공</u>
+  </li>
+  <li>
+    <figure>
+      <img src="/images/fig-service-1.jpg" alt="">
+    </figure>
+    <dl>
+      <dt>부동산 보상금 무료자문</dt>
+      <dd>
+        보상금 산정 무료 자문<br>
+        전문 변호사의 법률 지원<br>
+        다양한 사례 기반 상담<br>
+        보상 소송의 성공적인 결과 도출
+      </dd>
+    </dl>
+    <u>17년 보상소송 전문 변호사</u>
+  </li>
+</ul>
