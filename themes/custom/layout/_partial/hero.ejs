@@ -1,0 +1,176 @@
+<style>
+  #hero {
+    position: relative;
+    padding: 0 0 120%;
+    padding: 0 0 calc(100% + 70px);
+    background: linear-gradient(0deg, var(--color-highlight) 0%, #ffd671 100%);
+  }
+  #hero figure {
+    margin: 0;
+  }
+  #hero figure img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+  }
+  @media (min-width: 768px) {
+    #hero {
+      height: 100vh;
+      min-height: 700px;
+      padding: 0;
+    }
+    #hero figure img {
+      width: auto;
+      height: 85%;
+      transform: translateX(-5%);
+    }
+  }
+</style>
+<div id="hero">
+  <figure>
+    <img src="/images/fig-hero.png" alt="">
+  </figure>
+  <style>
+    #slogan-desktop {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translateY(-40%);
+    }
+    #slogan-desktop > p {
+      font-size: 36px;
+      font-weight: 100;
+      letter-spacing: -1px;
+    }
+    #slogan-desktop h1 {
+      margin-top: 10px;
+      line-height: 55px;
+      font-size: 37px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    #slogan-desktop h1 strong {
+      display: inline-block;
+      line-height: 47px;
+      padding: 4px 6px;
+      border-radius: 5px;
+      background-color: var(--color-highlight);
+    }
+    #slogan-desktop .contacts {
+      margin-top: 40px;
+      white-space: nowrap;
+    }
+    #slogan-desktop .contact-card {
+      display: inline-block;
+      position: relative;
+      min-width: 180px;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    #slogan-desktop .contact-card + .contact-card {
+      margin-left: 15px;
+    }
+    #slogan-desktop .contact-card:hover {
+      box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
+      transform: translateY(-5px);
+    }
+    #slogan-desktop .contact-card h3 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #slogan-desktop .contact-card h3 i,
+    #slogan-desktop .contact-card h3 img {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 30px;
+    }
+    #slogan-desktop .contact-card p {
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  </style>
+  <div id="slogan-desktop" class="only-desktop">
+    <p><%- config.description %></p>
+    <h1>
+      <span id="typed-1"></span>
+      <strong id="typed-2" style="visibility: hidden;"></strong>
+    </h1>
+    <script>
+      new Typed('#typed-1', {
+        strings: ['<%= config.company %>'],
+        startDelay: 500,
+        typeSpeed: 30,
+        cursorChar: '_'
+      });
+      new Typed('#typed-2', {
+        strings: ['<%= config.author %>'],
+        startDelay: 1400,
+        typeSpeed: 50,
+        cursorChar: '',
+        preStringTyped: function () {
+          $('#typed-2').css('visibility', 'visible');
+        }
+      });
+    </script>
+    <div class="contacts">
+      <a class="contact-card" href="tel:<%= config.tel %>">
+        <h3>
+          <i class="fa fa-address-card"></i>
+          전화 상담
+        </h3>
+        <p>
+          <u><%= config.tel %></u><br>
+          <%= config.author %>
+        </p>
+      </a>
+      <a class="contact-card" href="<%= config.kakao %>" target="_blank">
+        <h3>
+          <img src="/images/ui-contact-kakao.png" width="35" height="35">
+          카톡 상담
+        </h3>
+        <p>
+          1:1 채팅을 통해<br>
+          전용 상담을 받으세요.
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  #slogan {
+    padding: 30px 0;
+    background-color: var(--color-footer-background);
+    color: #fff;
+    text-align: center;
+  }
+  #slogan h1 {
+    font-size: 24px;
+  }
+  #slogan h1 strong {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  #slogan p {
+    margin-top: 15px;
+  }
+</style>
+<div id="slogan" class="only-mobile">
+  <h1>
+    <%= config.company %>
+    <strong><%= config.author %></strong>
+  </h1>
+  <p><%- config.description %></p>
+</div>
