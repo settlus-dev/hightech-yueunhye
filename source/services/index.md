@@ -4,19 +4,24 @@ date: 2025-01-13 15:18:38
 banner: images/bg-services.jpg
 ---
 
-# 감정평가법인의 업무 영역
+# 업무 영역
 
-저희 감정평가법인은 다양한 자산의 가치를 객관적이고 공정하게 평가하여 고객의 재산권 보호와 합리적인 의사결정을 지원합니다. 아래는 주요 업무 영역입니다.
+하이테크 감정평가법인은 20년 경력을 갖춘 전문성과 신뢰성으로 상속 및 증여, 기업 신용 평가, 보험 상품 평가, 특수 소송, 부동산 담보 평가 등 다양한 분야에서 고품질 서비스를 제공합니다.
+
+경쟁력 있는 비용과 무사고 기록, 맞춤형 컨설팅으로 법적 리스크를 최소화하며, 각 분야에서 최고의 결과를 보장합니다. 고객의 성공과 만족을 우선시하는 하이테크 감정평가법인이 함께합니다.
+
+<hr>
 
 <style>
   #services {
     margin: 0;
-    padding-bottom: 100px;
+    padding: 0 0 50px;
   }
   #services li {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 15px 0;
     list-style: none;
   }
   @media (min-width: 768px) {
@@ -25,8 +30,6 @@ banner: images/bg-services.jpg
     }
   }
   #services li + li {
-    margin-top: 15px;
-    padding: 15px 0;
     border-top: 1px solid var(--color-border);
   }
   #services li figure {
