@@ -58,8 +58,11 @@ banner: images/bg-services.jpg
     display: inline;
     color: var(--color-text);
     font-size: 24px;
-    font-weight: 900;
+    font-weight: bold;
+    line-height: 160%;
+    letter-spacing: -1px;
     text-underline-offset: 8px;
+    text-align: right;
     /* 수직 하단 정렬 */
     display: flex;
     flex-direction: column;
@@ -81,7 +84,7 @@ banner: images/bg-services.jpg
         경쟁력 있는 비용 제공
       </dd>
     </dl>
-    <u>20년 경력, 고품질 & 경쟁력 있는 비용</u>
+    <u>20년 경력<br>고품질 &amp; 경쟁력 있는 비용</u>
   </li>
   <li>
     <figure>
@@ -96,7 +99,7 @@ banner: images/bg-services.jpg
         100% 성공보수 보장
       </dd>
     </dl>
-    <u>14년 경력, 실비개념 100% 성공보수</u>
+    <u>14년 경력<br>실비개념 100% 성공보수</u>
   </li>
   <li>
     <figure>
@@ -141,7 +144,7 @@ banner: images/bg-services.jpg
         무사고 기록으로 입증된 신뢰성
       </dd>
     </dl>
-    <u>경쟁력 있는 평가금액, 14년 무사고 기록</u>
+    <u>경쟁력 있는 평가금액<br>14년 무사고 기록</u>
   </li>
   <li>
     <figure>
