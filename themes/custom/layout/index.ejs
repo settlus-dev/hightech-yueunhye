@@ -51,12 +51,12 @@
       line-height: 55px;
       font-size: 37px;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      letter-spacing: -1px;
     }
     #slogan-desktop h1 strong {
       display: inline-block;
       line-height: 47px;
-      padding: 4px 8px;
+      padding: 4px 6px;
       border-radius: 5px;
       background-color: var(--color-highlight);
     }
@@ -103,26 +103,29 @@
     <p><%- config.description %></p>
     <h1>
       <span id="typed-1"></span>
-      <strong id="typed-2"></strong>
+      <strong id="typed-2" style="visibility: hidden;"></strong>
     </h1>
     <script>
       new Typed('#typed-1', {
         strings: ['<%= config.company %>'],
         startDelay: 500,
         typeSpeed: 30,
-        cursorChar: ''
+        cursorChar: '_'
       });
       new Typed('#typed-2', {
         strings: ['<%= config.author %>'],
         startDelay: 1400,
         typeSpeed: 50,
-        cursorChar: ''
+        cursorChar: '',
+        preStringTyped: function () {
+          $('#typed-2').css('visibility', 'visible');
+        }
       });
     </script>
     <div class="contacts">
       <a class="contact-card" href="tel:<%= config.tel %>">
         <h3>
-          <i class="fa fa-id-card"></i>
+          <i class="fa fa-address-card"></i>
           전화 상담
         </h3>
         <p>
