@@ -14,10 +14,17 @@
       <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
       <div id="main-nav-menu">
         <a id="main-nav-logo" href="/">
-          <img src="/images/logo-hightech-white.svg" height="70" alt="<%= page.company %>">
+          <img
+            src="/images/logo-hightech-<%= colorScheme === 'white' ? 'white' : 'black' %>.svg"
+            height="70"
+            alt="<%= page.company %>">
         </a>
         <% for (var i in theme.menu){ %>
-          <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+          <a
+            class="main-nav-link <%= colorScheme %>"
+            href="<%- url_for(theme.menu[i]) %>">
+            <%= i %>
+          </a>
         <% } %>
       </div>
     </nav>

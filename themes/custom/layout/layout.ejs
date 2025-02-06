@@ -6,7 +6,7 @@
     <div id="container">
       <div id="wrap">
         <div id="container-sticky">
-          <%- partial('_partial/header-outer') %>
+          <%- partial('_partial/header-outer', {colorScheme: 'black'}) %>
         </div>
         <%- body %>
         <%- partial('_partial/related-links', null, {cache: !config.relative_link}) %>

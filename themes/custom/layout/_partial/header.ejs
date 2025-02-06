@@ -4,5 +4,5 @@
     style="<%= `background-image: url(${url_for(banner || theme.banner)})` %>">
     <h1><%- title %></h1>
   </div>
-  <%- partial('header-outer') %>
+  <%- partial('header-outer', {colorScheme: 'white'}) %>
 </header>
