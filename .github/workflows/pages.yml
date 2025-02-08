@@ -31,6 +31,8 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Add CNAME
+        run: echo "xn--2r5bic638c.hightechapp.io" > ./public/CNAME
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -45,9 +47,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Add CNAME
-        id: cname
-        run: echo "xn--2r5bic638c.hightechapp.io" > ./public/CNAME
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
