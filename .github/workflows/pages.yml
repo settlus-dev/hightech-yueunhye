@@ -45,6 +45,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Add CNAME
+        id: cname
+        run: echo "xn--2r5bic638c.hightechapp.io" > ./public/CNAME
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
