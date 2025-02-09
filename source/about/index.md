@@ -48,15 +48,10 @@ banner: images/bg-about.jpg
     flex: 1;
   }
   #on-your-side figure {
-    height: 100%;
     margin: 0;
-    /* 수직 하단 정렬 */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
   }
   #on-your-side figure img {
-    filter: grayscale(1);
+    height: 500px;
     vertical-align: bottom;
   }
 </style>
@@ -82,7 +77,7 @@ banner: images/bg-about.jpg
   </div>
   <div class="col">
     <figure>
-      <img src="/images/fig-hero.png" width="100%" alt="">
+      <img src="/images/fig-hero-secondary.png" alt="">
     </figure>
   </div>
 </div>
