@@ -14,8 +14,8 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 88%;
   }
   @media (min-width: 768px) {
     #hero {
@@ -25,8 +25,8 @@
     }
     #hero figure img {
       width: auto;
-      height: 85%;
-      transform: translateX(-5%);
+      height: 90%;
+      transform: translateX(10%);
     }
   }
 </style>
@@ -34,6 +34,69 @@
   <figure>
     <img src="/images/fig-hero.png" alt="">
   </figure>
+  <style>
+    #slogan-mobile .contacts {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+    #slogan-mobile .contact-button {
+      display: inline-block;
+      position: relative;
+      width: 130px;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+    }
+    #slogan-mobile .contact-button + .contact-button {
+      margin-left: 10px;
+    }
+    #slogan-mobile .contact-button h3 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    #slogan-mobile .contact-button h3 i,
+    #slogan-mobile .contact-button h3 img {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+    }
+    #slogan-mobile .contact-button p {
+      margin-top: 5px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  </style>
+  <div id="slogan-mobile" class="only-mobile">
+    <div class="contacts">
+      <a class="contact-button" href="tel:<%= config.tel %>">
+        <h3>
+          <i class="fa fa-address-card"></i>
+          전화 상담
+        </h3>
+        <!-- <p>
+          <u><%= config.tel %></u><br>
+          <%= config.author %>
+        </p> -->
+      </a>
+      <a class="contact-button" href="<%= config.kakao %>" target="_blank">
+        <h3>
+          <img src="/images/ui-contact-kakao.png" width="20" height="20">
+          카톡 상담
+        </h3>
+        <!-- <p>
+          1:1 채팅을 통해<br>
+          전용 상담을 받으세요.
+        </p> -->
+      </a>
+    </div>
+  </div>
   <style>
     #slogan-desktop {
       position: absolute;
@@ -64,37 +127,36 @@
       margin-top: 40px;
       white-space: nowrap;
     }
-    #slogan-desktop .contact-card {
+    #slogan-desktop .contact-button {
       display: inline-block;
       position: relative;
       min-width: 180px;
       padding: 20px;
       border-radius: 10px;
-      border: 1px solid rgba(0, 0, 0, 0.3);
       background-color: #000;
       color: #fff;
       text-decoration: none;
       transition: all 0.2s ease;
     }
-    #slogan-desktop .contact-card + .contact-card {
+    #slogan-desktop .contact-button + .contact-button {
       margin-left: 15px;
     }
-    #slogan-desktop .contact-card:hover {
+    #slogan-desktop .contact-button:hover {
       box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
       transform: translateY(-5px);
     }
-    #slogan-desktop .contact-card h3 {
+    #slogan-desktop .contact-button h3 {
       font-size: 20px;
       font-weight: bold;
     }
-    #slogan-desktop .contact-card h3 i,
-    #slogan-desktop .contact-card h3 img {
+    #slogan-desktop .contact-button h3 i,
+    #slogan-desktop .contact-button h3 img {
       position: absolute;
       top: 15px;
       right: 15px;
       font-size: 30px;
     }
-    #slogan-desktop .contact-card p {
+    #slogan-desktop .contact-button p {
       margin-top: 12px;
       font-size: 16px;
       line-height: 22px;
@@ -124,7 +186,7 @@
       });
     </script>
     <div class="contacts">
-      <a class="contact-card" href="tel:<%= config.tel %>">
+      <a class="contact-button" href="tel:<%= config.tel %>">
         <h3>
           <i class="fa fa-address-card"></i>
           전화 상담
@@ -134,7 +196,7 @@
           <%= config.author %>
         </p>
       </a>
-      <a class="contact-card" href="<%= config.kakao %>" target="_blank">
+      <a class="contact-button" href="<%= config.kakao %>" target="_blank">
         <h3>
           <img src="/images/ui-contact-kakao.png" width="35" height="35">
           카톡 상담
