@@ -1,0 +1,33 @@
+<article class="article-entry" itemprop="articleBody">
+  <%- page.content %>
+</article>
+
+<style>
+  #careers {
+    padding: 20px 0;
+    border-top: 1px solid var(--color-border);
+  }
+  #careers figure {
+    margin: 0;
+  }
+  #careers ul {
+    margin-top: 20px;
+  }
+  #careers ul li {
+    margin-top: 5px;
+    list-style: none;
+  }
+  #careers ul li a {
+    color: var(--color-link);
+  }
+</style>
+
+<div id="careers">
+  <!-- <figure>
+    <img src="/images/logo-hightech-black.svg" width="100" alt="하이테크감정평가법인">
+  </figure> -->
+  <ul>
+    <li>담당자: <%= config.author %></li>
+    <li>이메일: <a href="mailto:<%= config.email %>"><%= config.email %></a></li>
+  </ul>
+</div>

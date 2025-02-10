@@ -133,9 +133,24 @@ $nav-link
 .main-nav-link
   @extend $nav-link
   display: none
+  margin-top: 5px
   letter-spacing: 1px
   @media mq-normal
     display: inline-block
+  &.addon
+    position: absolute
+    top: 35px
+    right: 0
+    padding: 5px 10px
+    border-radius: 5px
+    font-size: 13px
+    font-weight: bold
+    text-shadow: none
+    letter-spacing: 0
+  &.addon.black
+    background-color: color-highlight
+  &.addon.white
+    background-color: #000
   &.black
     color: color-text
   &.white
