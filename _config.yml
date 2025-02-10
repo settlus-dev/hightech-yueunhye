@@ -19,7 +19,7 @@ kakao: https://open.kakao.com/o/smNesWDg
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://yueunhye.hightechapp.io
+url: https://유은혜.hightechapp.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
