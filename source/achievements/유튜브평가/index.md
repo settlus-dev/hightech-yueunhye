@@ -1,10 +1,9 @@
 ---
 title: 유튜브평가
 date: 2025-02-10 17:29:28
+layout: achievement
 banner: images/bg-achievements.jpg
 ---
-
-# 유튜브평가 설직
 
 <table>
   <thead>

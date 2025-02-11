@@ -1,10 +1,9 @@
 ---
 title: 상표권평가
 date: 2025-02-10 17:30:42
+layout: achievement
 banner: images/bg-achievements.jpg
 ---
-
-# 상표권평가 실적
 
 <table>
   <thead>

@@ -1,0 +1,54 @@
+<article class="article-entry" itemprop="articleBody">
+  <h1><%- page.title %></h1>
+</article>
+
+<style>
+  #related-services {
+    margin: 0;
+  }
+  #related-services li {
+    padding: 20px;
+    background-color: var(--color-off-white);
+    list-style: none;
+  }
+  #related-services li + li {
+    border-top: 1px solid var(--color-border);
+  }
+</style>
+
+<ul id="related-services">
+  <% if (['특수평가'].includes(page.title)) { %>
+    <li>
+      <%- partial('_partial/service-item', {item: '기업신용'}) %>
+    </li>
+  <% } %>
+  <% if (['특수평가'].includes(page.title)) { %>
+    <li>
+      <%- partial('_partial/service-item', {item: '보험상품'}) %>
+    </li>
+  <% } %>
+  <% if (['특수평가', '소송평가'].includes(page.title)) { %>
+    <li>
+      <%- partial('_partial/service-item', {item: '특수소송'}) %>
+    </li>
+  <% } %>
+  <% if (['상속증여평가'].includes(page.title)) { %>
+    <li>
+      <%- partial('_partial/service-item', {item: '상속증여절세'}) %>
+    </li>
+  <% } %>
+  <% if (['병원평가'].includes(page.title)) { %>
+    <li>
+      <%- partial('_partial/service-item', {item: '부동산담보'}) %>
+    </li>
+  <% } %>
+  <% if ([].includes(page.title)) { %>
+    <li>
+      <%- partial('_partial/service-item', {item: '부동산보상'}) %>
+    </li>
+  <% } %>
+</ul>
+
+<article class="article-entry" itemprop="articleBody">
+  <%- page.content %>
+</article>

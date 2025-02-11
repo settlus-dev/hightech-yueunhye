@@ -1,10 +1,9 @@
 ---
 title: 영업권평가
 date: 2025-02-10 17:30:30
+layout: achievement
 banner: images/bg-achievements.jpg
 ---
-
-# 영업권평가 실적
 
 <table>
 <thead>

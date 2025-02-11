@@ -1,10 +1,9 @@
 ---
 title: 저작권평가
 date: 2025-02-10 17:30:15
+layout: achievement
 banner: images/bg-achievements.jpg
 ---
-
-# 저작권평가 실적
 
 <table>
   <thead>

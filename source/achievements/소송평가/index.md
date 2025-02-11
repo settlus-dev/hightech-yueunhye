@@ -1,10 +1,9 @@
 ---
 title: 소송평가
 date: 2025-02-10 17:30:53
+layout: achievement
 banner: images/bg-achievements.jpg
 ---
-
-# 소송평가 실적
 
 <table>
   <thead>
