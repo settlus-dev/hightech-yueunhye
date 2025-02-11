@@ -1,0 +1,41 @@
+<article class="article-entry" itemprop="articleBody">
+  <%- page.content %>
+</article>
+
+<style>
+  #services {
+    margin: 0;
+    padding: 0 0 50px;
+  }
+  #services li {
+    padding: 15px 0;
+    list-style: none;
+  }
+  #services li + li {
+    border-top: 1px solid var(--color-border);
+  }
+</style>
+
+<ul id="services">
+  <!-- <li>
+    <%- partial('_partial/service-item', {item: '상속증여등기'}) %>
+  </li> -->
+  <li>
+    <%- partial('_partial/service-item', {item: '기업신용'}) %>
+  </li>
+  <li>
+    <%- partial('_partial/service-item', {item: '보험상품'}) %>
+  </li>
+  <li>
+    <%- partial('_partial/service-item', {item: '특수소송'}) %>
+  </li>
+  <li>
+    <%- partial('_partial/service-item', {item: '상속증여절세'}) %>
+  </li>
+  <li>
+    <%- partial('_partial/service-item', {item: '부동산담보'}) %>
+  </li>
+  <li>
+    <%- partial('_partial/service-item', {item: '부동산보상'}) %>
+  </li>
+</ul>
