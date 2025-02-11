@@ -1,7 +1,7 @@
 ---
 title: 유튜브평가
 date: 2025-02-10 17:29:28
-banner: images/bg-services.jpg
+banner: images/bg-achievements.jpg
 ---
 
 # 유튜브평가 설직

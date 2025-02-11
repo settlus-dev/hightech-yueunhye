@@ -1,7 +1,7 @@
 ---
 title: 특허권평가
 date: 2025-02-10 17:30:37
-banner: images/bg-services.jpg
+banner: images/bg-achievements.jpg
 ---
 
 # 특허권평가 실적

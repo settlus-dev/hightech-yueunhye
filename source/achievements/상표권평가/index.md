@@ -1,7 +1,7 @@
 ---
 title: 상표권평가
 date: 2025-02-10 17:30:42
-banner: images/bg-services.jpg
+banner: images/bg-achievements.jpg
 ---
 
 # 상표권평가 실적

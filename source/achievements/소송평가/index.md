@@ -1,7 +1,7 @@
 ---
 title: 소송평가
 date: 2025-02-10 17:30:53
-banner: images/bg-services.jpg
+banner: images/bg-achievements.jpg
 ---
 
 # 소송평가 실적

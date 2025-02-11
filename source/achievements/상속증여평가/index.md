@@ -1,7 +1,7 @@
 ---
 title: 상속증여평가
 date: 2025-02-10 17:30:59
-banner: images/bg-services.jpg
+banner: images/bg-achievements.jpg
 ---
 
 # 상속증여평가 실적
