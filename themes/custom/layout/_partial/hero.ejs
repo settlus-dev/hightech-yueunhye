@@ -8,6 +8,13 @@
     background-size: cover;
     background-position: 50% 100%;
   }
+  @media (min-width: 768px) {
+    #hero {
+      height: 100vh;
+      min-height: 700px;
+      padding: 0;
+    }
+  }
   #footages {
     position: absolute;
     bottom: 17.7%;
@@ -102,14 +109,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    background-color: #000;
     object-fit: cover;
-  }
-  @media (min-width: 768px) {
-    #hero {
-      height: 100vh;
-      min-height: 700px;
-      padding: 0;
-    }
   }
 </style>
 <div id="hero">
