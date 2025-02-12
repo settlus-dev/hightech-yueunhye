@@ -3,106 +3,19 @@
     position: relative;
     padding: 0 0 120%;
     padding: 0 0 calc(100% + 70px);
-    background-color: var(--color-highlight);
-    background-image: url("/images/bg-wtc.png"), linear-gradient(0deg, var(--color-highlight) 0%, #ffd671 100%);
-    background-size: cover;
-    background-position: 50% 100%;
+    background: linear-gradient(0deg, var(--color-highlight) 0%, #ffd671 100%);
   }
-  #footages {
+  #hero figure {
+    margin: 0;
+  }
+  #hero figure img {
+    display: block;
     position: absolute;
-    bottom: 17.7%;
+    bottom: 0;
     left: 50%;
-    height: 14.5%;
-    /* margin-left: 28px; */
-    margin-left: 2%;
-  }
-  /* 기준선 테스트 할 때 사용하는 스타일 입니다. */
-  /* #footages:before {
-    z-index: 20;
-    content: "";
-    display: block;
-    position: absolute;
-    top: -20px;
-    bottom: -20px;
-    left: 0;
-    width: 1px;
-    background-color: #f00;
-  } */
-  #footage-front {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    aspect-ratio: 2.57;
-    perspective: 500px;
-  }
-  #footage-front .footage {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 0 3px 3px 0;
-    transform: rotateY(38deg);
-	  transform-origin: 0 0;
-  }
-  #footage-front .footage:before,
-  #footage-front .footage:after {
-    z-index: 10;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    
-  }
-  #footage-front .footage:before {
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 5%);
-  }
-  #footage-front .footage:after {
-    background: linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%);
-  }
-  #footage-side {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    aspect-ratio: 0.82;
-    perspective: 500px;
-  }
-  #footage-side .footage {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px 0 0 4px;
-    transform: rotateY(-50deg);
-	  transform-origin: 100% 0;
-  }
-  #footage-side .footage:before,
-  #footage-side .footage:after {
-    z-index: 10;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    
-  }
-  #footage-side .footage:before {
-    background: linear-gradient(90deg, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 100%);
-  }
-  #footage-side .footage:after {
-    background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 10%);
-  }
-  .footage video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    transform: translateX(-50%);
+    width: auto;
+    height: 88%;
   }
   @media (min-width: 768px) {
     #hero {
@@ -110,47 +23,34 @@
       min-height: 700px;
       padding: 0;
     }
+    #hero figure img {
+      width: auto;
+      height: 90%;
+      transform: translateX(10%);
+    }
   }
 </style>
 <div id="hero">
-  <div id="footages">
-    <div id="footage-front">
-      <div class="footage">
-        <video autoplay loop muted playsinline>
-          <source src="/videos/business-woman-1.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-    <div id="footage-side">
-      <div class="footage">
-        <video autoplay loop muted playsinline>
-          <source src="/videos/business-woman-2.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </div>
+  <figure>
+    <img src="/images/fig-hero.png" alt="">
+  </figure>
   <style>
     #slogan-mobile .contacts {
       position: absolute;
-      right: 50%;
-      bottom: 50%;
-      left: 0;
-      margin-right: -12%;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
       white-space: nowrap;
-      text-align: center;
     }
     #slogan-mobile .contact-button {
       display: inline-block;
       position: relative;
-      width: 80px;
-      height: 80px;
-      padding-top: 15px;
-      border-radius: 10px;
-      box-sizing: border-box;
-      background-color: var(--color-highlight);
-      box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.25);
-      color: #000;
-      text-align: center;
+      width: 130px;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background-color: #000;
+      color: #fff;
       text-decoration: none;
     }
     #slogan-mobile .contact-button + .contact-button {
@@ -162,9 +62,10 @@
     }
     #slogan-mobile .contact-button h3 i,
     #slogan-mobile .contact-button h3 img {
-      display: block;
-      margin: 0 auto 5px;
-      font-size: 30px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
     }
     #slogan-mobile .contact-button p {
       margin-top: 5px;
@@ -186,7 +87,7 @@
       </a>
       <a class="contact-button" href="<%= config.kakao %>" target="_blank">
         <h3>
-          <img src="/images/ui-contact-kakao.png" width="30" height="30">
+          <img src="/images/ui-contact-kakao.png" width="20" height="20">
           카톡 상담
         </h3>
         <!-- <p>
