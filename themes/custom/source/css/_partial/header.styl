@@ -107,6 +107,10 @@ $nav-link
   padding: 20px
   position: relative
   cursor: pointer
+  &.black
+    color: color-text
+  &.white
+    color: #fff
 
 #main-nav-menu
   margin-top: 20px
@@ -117,6 +121,8 @@ $nav-link
   top: 10px
   left: 50%
   transform: translateX(-50%)
+  &.black
+    display: none
   @media mq-normal
     float: left
     position: static
@@ -124,6 +130,8 @@ $nav-link
     left: auto
     transform: none
     margin: 0 40px 0 0
+    &.black
+      display: inline-block
 
 #main-nav-logo img
   height: 45px

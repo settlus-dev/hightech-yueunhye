@@ -2,26 +2,29 @@
   #hero {
     position: relative;
     padding: 0 0 120%;
-    padding: 0 0 calc(100% + 70px);
     background-color: var(--color-highlight);
-    background-image: url("/images/bg-wtc.png"), linear-gradient(0deg, var(--color-highlight) 0%, #ffd671 100%);
+    background-image: url("/images/bg-wtc-portrait.png"), linear-gradient(0deg, var(--color-highlight) 0%, #ffd671 100%);
     background-size: cover;
     background-position: 50% 100%;
-  }
-  @media (min-width: 768px) {
-    #hero {
-      height: 100vh;
-      min-height: 700px;
-      padding: 0;
-    }
   }
   #footages {
     position: absolute;
     bottom: 17.7%;
     left: 50%;
     height: 14.5%;
-    /* margin-left: 28px; */
-    margin-left: 2%;
+    margin: 0 0 0 -35%;
+  }
+  @media (min-width: 768px) {
+    #hero {
+      height: 100vh;
+      min-height: 700px;
+      padding: 0;
+      background-image: url("/images/bg-wtc-landscape.png"), linear-gradient(0deg, var(--color-highlight) 0%, #ffd671 100%);
+      background-position: 50% 100%;
+    }
+    #footages {
+      margin: 0 0 0 2%;
+    }
   }
   /* 기준선 테스트 할 때 사용하는 스타일 입니다. */
   /* #footages:before {
@@ -73,7 +76,7 @@
   #footage-side {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -1px;
     bottom: 0;
     aspect-ratio: 0.82;
     perspective: 500px;
@@ -131,49 +134,59 @@
     </div>
   </div>
   <style>
-    #slogan-mobile .contacts {
+    #slogan-mobile {
       position: absolute;
-      right: 50%;
+      right: 0;
       bottom: 50%;
-      left: 0;
-      margin-right: -12%;
-      white-space: nowrap;
+      left: 50%;
       text-align: center;
     }
-    #slogan-mobile .contact-button {
+    #slogan-mobile figure.logo {
+      margin: 0 0 20px;
+    }
+    #slogan-mobile .contacts {
       display: inline-block;
+      margin: 0 auto;
+    }
+    #slogan-mobile .contact-button {
+      display: block;
       position: relative;
-      width: 80px;
-      height: 80px;
-      padding-top: 15px;
-      border-radius: 10px;
-      box-sizing: border-box;
-      background-color: var(--color-highlight);
-      box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.25);
-      color: #000;
-      text-align: center;
+      width: 100px;
+      padding: 12px;
+      border-radius: 5px;
+      background-color: #000;
+      color: #fff;
+      text-align: left;
       text-decoration: none;
     }
     #slogan-mobile .contact-button + .contact-button {
-      margin-left: 10px;
+      margin-top: 10px;
     }
     #slogan-mobile .contact-button h3 {
-      font-size: 14px;
-      font-weight: bold;
+      font-size: 16px;
+      font-weight: normal;
     }
     #slogan-mobile .contact-button h3 i,
     #slogan-mobile .contact-button h3 img {
-      display: block;
-      margin: 0 auto 5px;
-      font-size: 30px;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 20px;
     }
     #slogan-mobile .contact-button p {
-      margin-top: 5px;
+      margin-top: 10px;
       font-size: 12px;
-      line-height: 16px;
+      line-height: 1.6;
     }
   </style>
   <div id="slogan-mobile" class="only-mobile">
+    <figure class="logo">
+      <img
+        src="/images/logo-hightech-black.svg"
+        height="50"
+        alt="<%= page.company %>">
+      </a>
+    </figure>
     <div class="contacts">
       <a class="contact-button" href="tel:<%= config.tel %>">
         <h3>
@@ -187,7 +200,7 @@
       </a>
       <a class="contact-button" href="<%= config.kakao %>" target="_blank">
         <h3>
-          <img src="/images/ui-contact-kakao.png" width="30" height="30">
+          <img src="/images/ui-contact-kakao.png" width="20" height="20">
           카톡 상담
         </h3>
         <!-- <p>
