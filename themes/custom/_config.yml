@@ -3,7 +3,7 @@
 # ===============
 # Navigation menu
 menu:
-  # 하이테크감정평가법인: /about
+  인사말: /about
   메가테크이론: /megatech
   업무영역: /services
   평가사례: /cases
