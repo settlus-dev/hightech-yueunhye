@@ -3,11 +3,11 @@
 # ===============
 # Navigation menu
 menu:
-  인사말: /about
-  메가테크이론: /megatech
-  업무영역: /services
+  메가테크: /about
+  # 메가테크이론: /megatech
+  평가영역: /services
   평가사례: /cases
-  아티클: /articles
+  새소식: /articles
   평가의뢰: /contact
 # RSS link (default: /atom.xml)
 rss:
@@ -72,7 +72,7 @@ gauges_analytics:
 # Favicon path
 favicon: /images/favicon.png
 # OpenGraph image
-image: /images/ogimage.jpg
+image: /images/ogimage.png
 # Twitter ID
 twitter:
 fb_admins:

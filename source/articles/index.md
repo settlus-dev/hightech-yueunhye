@@ -5,4 +5,4 @@ layout: articles
 banner: images/bg-articles.jpg
 ---
 
-# 아티클
+# 새소식
