@@ -13,7 +13,7 @@ banner: images/bg-about.jpg
   @media (min-width: 768px) {
     #on-your-side {
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
   #on-your-side figure {
