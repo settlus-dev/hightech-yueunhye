@@ -47,6 +47,7 @@
     }
     #preview-achievements ul li {
       overflow: hidden;
+      position: relative;
       border-radius: 10px;
       border: 1px solid var(--color-border);
       background-color: #fff;
@@ -59,6 +60,18 @@
       display: block;
       color: var(--color-text);
       text-decoration: none;
+    }
+    #preview-achievements ul li u {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 10px;
+      color: var(--color-grey);
+      font-size: 12px;
+      text-decoration: none;
+    }
+    #preview-achievements ul li u i {
+      margin-left: 2px;
     }
     #preview-achievements ul li figure {
       overflow: hidden;
@@ -90,12 +103,16 @@
         box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
         transform: translateY(-5px);
       }
+      #preview-achievements ul li u {
+        padding: 20px;
+        font-size: 14px;
+      }
       #preview-achievements ul li figure {
         padding-bottom: 56.25%;
       }
     }
     #preview-achievements dl {
-      padding: 10px;
+      padding: 10px 10px 30px;
     }
     #preview-achievements dt {
       font-size: 16px;
@@ -107,7 +124,7 @@
     }
     @media (min-width: 768px) {
       #preview-achievements dl {
-        padding: 20px;
+        padding: 20px 20px 60px;
       }
       #preview-achievements dt {
         font-size: 20px;
@@ -135,6 +152,10 @@
             <dt>상속증여평가</dt>
             <dd>시가참조 평가 2만건</dd>
           </dl>
+          <u>
+            실적 보러가기
+            <i class="fa fa-angle-right"></i>
+          </u>
         </a>
       </li>
       <li>
@@ -146,6 +167,10 @@
             <dt>영업권평가</dt>
             <dd>법인 전환시 현물 출자</dd>
           </dl>
+          <u>
+            실적 보러가기
+            <i class="fa fa-angle-right"></i>
+          </u>
         </a>
       </li>
       <li>
@@ -157,6 +182,10 @@
             <dt>특허권평가</dt>
             <dd>특허 기술의 시장성·수익화 고려한 가치 평가</dd>
           </dl>
+          <u>
+            실적 보러가기
+            <i class="fa fa-angle-right"></i>
+          </u>
         </a>
       </li>
     </ul>
@@ -170,6 +199,10 @@
             <dt>유튜브 · 인플루언서 평가</dt>
             <dd>크리에이터 수익성 · 브랜드 가치 평가</dd>
           </dl>
+          <u>
+            실적 보러가기
+            <i class="fa fa-angle-right"></i>
+          </u>
         </a>
       </li>
       <li>
@@ -181,6 +214,10 @@
             <dt>저작권평가</dt>
             <dd>저작물 권리·수익성 가치 산정</dd>
           </dl>
+          <u>
+            실적 보러가기
+            <i class="fa fa-angle-right"></i>
+          </u>
         </a>
       </li>
       <li>
@@ -192,6 +229,10 @@
             <dt>상표권평가</dt>
             <dd>브랜드 인지도 및 시장 가치 종합 분석</dd>
           </dl>
+          <u>
+            실적 보러가기
+            <i class="fa fa-angle-right"></i>
+          </u>
         </a>
       </li>
       <li>
@@ -203,6 +244,10 @@
             <dt>병원평가</dt>
             <dd>운영권 및 부동산 · 시설 가치 종합 평가</dd>
           </dl>
+          <u>
+            실적 보러가기
+            <i class="fa fa-angle-right"></i>
+          </u>
         </a>
       </li>
       <li>
@@ -214,6 +259,10 @@
             <dt>소송평가</dt>
             <dd>분쟁 · 소송시 신뢰성 확보를 위한 평가</dd>
           </dl>
+          <u>
+            실적 보러가기
+            <i class="fa fa-angle-right"></i>
+          </u>
         </a>
       </li>
       <li>
@@ -225,6 +274,10 @@
             <dt>특수평가</dt>
             <dd></dd>
           </dl>
+          <u>
+            실적 보러가기
+            <i class="fa fa-angle-right"></i>
+          </u>
         </a>
       </li>
     </ul>
