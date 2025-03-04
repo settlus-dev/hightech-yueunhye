@@ -20,7 +20,7 @@ blog: https://blog.naver.com/ulive_
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://유은혜.hightechapp.io
+url: https://유은혜.hightechmember.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
