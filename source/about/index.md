@@ -76,10 +76,24 @@ banner: images/bg-about.jpg
     font-family: serif;
   }
   #megatech-theory h1 {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
-    font-size: 26px;
     color: var(--color-text);
+  }
+  #megatech-theory h1 big {
+    display: block;
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+  }
+  #megatech-theory h1 small {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    opacity: 0.7;
   }
   #megatech-theory h2 {
     margin: 40px 0 20px;
@@ -96,8 +110,11 @@ banner: images/bg-about.jpg
     #megatech-theory {
       padding: 40px;
     }
-    #megatech-theory h1 {
+    #megatech-theory h1 big {
       font-size: 32px;
+    }
+    #megatech-theory h1 small {
+      font-size: 16px;
     }
     #megatech-theory p {
       font-size: 16px;
@@ -105,7 +122,10 @@ banner: images/bg-about.jpg
   }
 </style>
 <section id="megatech-theory">
-  <h1>메가테크이론</h1>
+  <h1>
+    <big>메가테크이론</big>
+    <small>Megatech Theory</small>
+  </h1>
 
   <h2>1. 공개성</h2>
   <p>
