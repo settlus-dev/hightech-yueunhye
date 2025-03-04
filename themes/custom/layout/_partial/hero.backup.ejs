@@ -247,10 +247,24 @@
 <script>
   function copyKakaoId() {
     const kakaoId = '<%= config.kakao %>';
-    navigator.clipboard.writeText(kakaoId).then(() => {
+    
+    // Create temporary textarea element
+    const textarea = document.createElement('textarea');
+    textarea.value = kakaoId;
+    textarea.style.position = 'fixed'; // Prevent scrolling to bottom
+    document.body.appendChild(textarea);
+    
+    try {
+      // Select and copy text
+      textarea.select();
+      textarea.setSelectionRange(0, 99999); // For mobile devices
+      document.execCommand('copy');
       alert('카카오톡 ID를 클립보드에 복사했습니다.\nID: <%= config.kakao %>');
-    }).catch(err => {
+    } catch (err) {
       console.error('클립보드 복사 실패:', err);
-    });
+    } finally {
+      // Clean up
+      document.body.removeChild(textarea);
+    }
   }
 </script>
