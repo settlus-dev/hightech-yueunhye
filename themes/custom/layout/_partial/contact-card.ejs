@@ -2,12 +2,16 @@
   .contact-card {
     display: block;
     position: relative;
+    width: 100%;
     padding: 20px;
+    box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: var(--color-mobile-nav-background);
     color: #fff;
     text-decoration: none;
+    text-align: left;
+    cursor: pointer;
   }
   .contact-card:hover {
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -42,7 +46,7 @@
   </a>
 <% } %>
 <% if (type === 'kakao') { %>
-  <a class="contact-card">
+  <button type="button" class="contact-card" onclick="copyKakaoId()">
     <h3>
       <img src="/images/ui-contact-kakao.png" width="35" height="35">
       카톡 상담
@@ -50,7 +54,17 @@
     <p>
       ID: <%= config.kakao %>
     </p>
-  </a>
+  </button>
+  <script>
+    function copyKakaoId() {
+      const kakaoId = '<%= config.kakao %>';
+      navigator.clipboard.writeText(kakaoId).then(() => {
+        alert('카카오톡 ID를 클립보드에 복사했습니다.\nID: <%= config.kakao %>');
+      }).catch(err => {
+        console.error('클립보드 복사 실패:', err);
+      });
+    }
+  </script>
 <% } %>
 <% if (type === 'phone') { %>
   <a class="contact-card" href="tel:<%= config.tel %>">
