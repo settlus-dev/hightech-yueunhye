@@ -73,9 +73,10 @@
           pubDate
         } = item;
         const postId = guid.split('/')[guid.split('/').length-1];
+        // <a href="/articles/article/?postId=${postId}">
         const $template = $(`
           <li>
-            <a href="/articles/article/?postId=${postId}">
+            <a href="<%= config.blog %>/${postId}" target="_blank">
               <h3>${title}</h3>
               <p>${description}</p>
               <time>${dateFns.format(pubDate, 'yyyy-MM-dd HH:mm')}</time>
