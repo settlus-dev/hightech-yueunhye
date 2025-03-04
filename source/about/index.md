@@ -69,7 +69,7 @@ banner: images/bg-about.jpg
 
 <style>
   #megatech-theory {
-    margin: 50px auto;
+    margin: 0 auto 50px;
     padding: 20px;
     border: 1px solid var(--color-border);
     box-shadow: 0 10px 50px -30px rgba(0,0,0,0.3);
@@ -108,6 +108,7 @@ banner: images/bg-about.jpg
   }
   @media (min-width: 768px) {
     #megatech-theory {
+      margin: 50px auto;
       padding: 40px;
     }
     #megatech-theory h1 big {
