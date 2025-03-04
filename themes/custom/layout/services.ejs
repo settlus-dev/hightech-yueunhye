@@ -3,6 +3,25 @@
 </article>
 
 <style>
+  /* 
+    featured-services partial 을 em 단위로 스타일링 했기 때문에,
+    부모 요소에서 스케일 결정을 위해 font-size 를 지정합니다.
+  */
+  #featured-services {
+    margin: 0 0 40px;
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    #featured-services {
+      font-size: 13px;
+    }
+  }
+</style>
+<div id="featured-services">
+  <%- partial('_partial/featured-services') %>
+</div>
+
+<style>
   #services {
     margin: 0;
     padding: 0 0 50px;

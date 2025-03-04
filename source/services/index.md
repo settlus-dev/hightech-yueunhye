@@ -6,5 +6,3 @@ banner: images/bg-services.jpg
 ---
 
 # 평가 영역
-
-<hr>

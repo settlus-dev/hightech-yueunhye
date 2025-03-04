@@ -1,0 +1,152 @@
+<style>
+  ul.featured-services {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9375em;
+    padding: 0;
+    list-style: none;
+    perspective: 1000px;
+  }
+  ul.featured-services li {
+    position: relative;
+    background: var(--color-mobile-nav-background);
+    border-radius: 0.9375em;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+  }
+  @media (min-width: 768px) {
+    ul.featured-services {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25em;
+    }
+    ul.featured-services li:hover {
+      background: #000;
+      transform: scale(1.05) rotateY(-5deg) rotateZ(-1deg) translateZ(0.625em);
+      box-shadow: 0 1.5625em 3.125em -0.75em rgba(0, 0, 0, 0.3);
+    }
+  }
+  ul.featured-services li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+  }
+  ul.featured-services li figure {
+    margin: 0;
+    padding: 1.5625em;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  ul.featured-services li figure big {
+    white-space: nowrap;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: rgba(255,255,255,0.5);
+    text-shadow: 0 0.125em 0.625em rgba(0,0,0,0.3);
+    background: linear-gradient(90deg,
+      rgba(255,255,255,0.5) 0%,
+      rgba(255,255,255,0.8) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease;
+  }
+  @media (min-width: 768px) {
+    ul.featured-services li:hover figure big {
+      background: linear-gradient(90deg,
+        rgba(255,255,255,0.5) 0%,
+        #f3b926 25%,
+        rgba(255,255,255,0.8) 50%,
+        #f3b926 75%,
+        rgba(255,255,255,0.5) 100%
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-position: -100% 0;
+    }
+  }
+  ul.featured-services li dl {
+    padding: 1.5625em;
+  }
+  ul.featured-services li dt {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0.125em 0.25em rgba(0,0,0,0.3);
+  }
+  ul.featured-services li dd {
+    margin-top: 0.5em;
+    font-size: 0.875em;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.7);
+  }
+  ul.featured-services li u {
+    display: block;
+    padding: 0 1.5625em 1.5625em;
+    text-decoration: none;
+    font-size: 0.875em;
+    color: rgba(255,255,255,0.6);
+  }
+</style>
+
+<ul class="featured-services">
+  <li>
+    <a href="/services">
+      <figure>
+        <big>
+          RISK<br>
+          PROTECTION
+        </big>
+      </figure>
+      <dl>
+        <dt>100% 손해배상책임확약서</dt>
+        <dd>평가서 작성에 대한 책임을 확실히 보장하는 안전한 평가서입니다</dd>
+      </dl>
+      <u>
+        자세히 보기
+        <i class="fa fa-angle-right"></i>
+      </u>
+    </a>
+  </li>
+  <li>
+    <a href="/services">
+      <figure>
+        <big>
+          IMPROVE<br>
+          YOUR CREDIT
+        </big>
+      </figure>
+      <dl>
+        <dt>재무재표 수정 없는 기업신용등급 개선</dt>
+        <dd>기업 자산 재평가를 통해 재무재표 수정 없이도 기업신용등급을 효과적으로 개선해드립니다.</dd>
+      </dl>
+      <u>
+        자세히 보기
+        <i class="fa fa-angle-right"></i>
+      </u>
+    </a>
+  </li>
+  <li>
+    <a href="/services">
+      <figure>
+        <big>
+          ALL CAN BE<br>
+          EVALUATED
+        </big>
+      </figure>
+      <dl>
+        <dt>&quot;이런것도 평가한다고?&quot;</dt>
+        <dd>
+          어디서도 못하는 특수한 자산이나 권리도 전문성을 바탕으로 정확하게 평가해드립니다.
+        </dd>
+      </dl>
+      <u>
+        자세히 보기
+        <i class="fa fa-angle-right"></i>
+      </u>
+    </a>
+  </li>
+</ul>
