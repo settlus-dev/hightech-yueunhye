@@ -86,14 +86,14 @@ if sidebar and sidebar isnt bottom
     @media mq-normal
       float: left
       width: column-width * main-column
-      padding: 0 gutter-width 0 0
+      padding: 0 gutter-width*2 0 0
       box-sizing: border-box
 
 if sidebar is left
   @media mq-normal
     #main
       float: right
-      padding: 0 0 0 gutter-width
+      padding: 0 0 0 gutter-width*2
 
 #main-full
   padding: 0 gutter-width
