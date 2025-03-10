@@ -16,7 +16,7 @@
       <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
       <%- partial('_partial/after-footer') %>
     </div>
-  <% } else if (page.layout === 'contact') { %>
+  <% } else if (page.layout === 'about' || page.layout === 'contact') { %>
     <div id="container">
       <div id="wrap">
         <%- partial('_partial/header', {title: page.title, banner: page.banner}) %>
