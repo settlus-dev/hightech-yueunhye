@@ -21,7 +21,9 @@
       <div id="wrap">
         <%- partial('_partial/header', {title: page.title, banner: page.banner}) %>
         <div class="outer">
-          <%- body %>
+          <section id="main-full">
+            <%- body %>
+          </section>
         </div>
         <!-- <%- partial('_partial/related-links', null, {cache: !config.relative_link}) %> -->
         <%- partial('_partial/footer-contact', null, {cache: !config.relative_link}) %>
