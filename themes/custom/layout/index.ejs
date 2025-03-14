@@ -433,6 +433,8 @@
           </li>
         `);
         const $reportSheet = $(`<%- partial('_partial/report-sheet') %>`);
+        // 랜덤 이미지 설정 (1, 2, 3 중 하나)
+        $reportSheet.find('img').attr('src', `/images/fig-report-sheet-${Math.floor(Math.random() * 3) + 1}.svg`);
         $reportSheet.find('figcaption').text(title);
         $template.find('a').append($reportSheet);
         $template.clone().appendTo('ul#cases-carousel');
