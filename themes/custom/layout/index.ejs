@@ -12,6 +12,39 @@
 </style>
 <main>
   <style>
+    #featured-services {
+      margin: 0 20px;
+      padding-bottom: 50px;
+    }
+    #featured-services header {
+      padding: 50px 0;
+      text-align: center;
+    }
+    #featured-services header h2 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #featured-services header p {
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+    @media (min-width: 768px) {
+      #featured-services {
+        margin: 0;
+      }
+    }
+  </style>
+  <div id="featured-services">
+    <header>
+      <h2>오직 하이테크에서만</h2>
+      <p>
+        하이테크만의 차별점, 평가서 이럴 때 활용하세요. 
+      </p>
+    </header>
+    <%- partial('_partial/featured-services') %>
+  </div>
+
+  <style>
     #preview-achievements {
       padding-bottom: 50px;
       background-color: var(--color-off-white);
@@ -281,39 +314,6 @@
         </a>
       </li>
     </ul>
-  </div>
-
-  <style>
-    #featured-services {
-      margin: 0 20px;
-      padding-bottom: 50px;
-    }
-    #featured-services header {
-      padding: 50px 0;
-      text-align: center;
-    }
-    #featured-services header h2 {
-      font-size: 22px;
-      font-weight: bold;
-    }
-    #featured-services header p {
-      margin-top: 10px;
-      line-height: 1.4;
-    }
-    @media (min-width: 768px) {
-      #featured-services {
-        margin: 0;
-      }
-    }
-  </style>
-  <div id="featured-services">
-    <header>
-      <h2>오직 하이테크에서만</h2>
-      <p>
-        하이테크만의 차별점, 평가서 이럴 때 활용하세요. 
-      </p>
-    </header>
-    <%- partial('_partial/featured-services') %>
   </div>
 
   <style>

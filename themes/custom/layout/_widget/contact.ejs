@@ -22,18 +22,17 @@
   #widget-contact .container {
     position: relative;
   }
-  #widget-contact .contact-types {
-    margin-top: 20px;
-  }
   #widget-contact .contact-types li + li {
     margin-top: 15px;
+  }
+  #widget-contact #cases-latest {
+    margin-top: 20px;
   }
 </style>
 
 <div id="widget-contact">
   <%- partial('../_partial/video-cover') %>
   <div class="container">
-    <%- partial('../_partial/cases-latest') %>
     <ul class="contact-types">
       <li>
         <%- partial('../_partial/contact-card', {type: 'online'}) %>
@@ -45,5 +44,6 @@
         <%- partial('../_partial/contact-card', {type: 'phone'}) %>
       </li>
     </ul>
+    <%- partial('../_partial/cases-latest') %>
   </div>
 </div>

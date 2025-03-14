@@ -6,7 +6,7 @@ menu:
   메가테크: /about
   새소식: /articles
   # 메가테크이론: /megatech
-  평가영역: /services
+  # 평가영역: /services
   평가사례: /cases
   평가의뢰: /contact
 # RSS link (default: /atom.xml)
