@@ -6,13 +6,15 @@
   }
   #hero figure {
     margin: 0;
-  }
-  #hero figure img {
-    display: block;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: auto;
+    height: 100%;
+  }
+  #hero figure img {
+    display: block;
     width: auto;
     height: 100%;
   }
@@ -22,10 +24,12 @@
       min-height: 700px;
       padding: 0;
     }
-    #hero figure img {
-      width: auto;
+    #hero figure {
       height: 90%;
       transform: translateX(-10%);
+    }
+    #hero figure img {
+      height: 100%;
     }
   }
 </style>
@@ -33,6 +37,27 @@
   <figure>
     <img src="/images/fig-hero.png" alt="">
   </figure>
+  <script>
+    const { animate, scroll } = Motion;
+    animate('#hero figure img', {
+      opacity: [0, 1], 
+      x: [-10, 0]
+    }, {
+      delay: 0.3,
+      duration: 0.5,
+      easing: 'ease'
+    }).finished.then(() => {
+      scroll(
+        animate('#hero figure img', {
+          opacity: [1, 0]
+        }),
+        {
+          target: document.querySelector('#hero figure img'),
+          offset: ['start start', 'end start']
+        }
+      );
+    });
+  </script>
   <!-- <style>
     #slogan-mobile .contacts {
       position: absolute;
