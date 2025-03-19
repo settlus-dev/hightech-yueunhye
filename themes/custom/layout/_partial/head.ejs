@@ -1,6 +1,9 @@
 <head>
   <meta charset="utf-8">
   <%- partial('google-analytics') %>
+  <% if (theme.naver_search){ %>
+    <meta name="naver-site-verification" content="<%= theme.naver_search %>">
+  <% } %>
   <%
   var title = page.title;
 
@@ -18,8 +21,8 @@
     title = __('tag') + ': ' + page.tag;
   }
   %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <%- open_graph({image: theme.image, twitter_id: theme.twitter, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   <% if (config.feed) { %>
     <%- feed_tag() %>

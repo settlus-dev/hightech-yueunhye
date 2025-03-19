@@ -69,6 +69,8 @@ recent_posts_limits: 5
 # Google Analytics ID
 google_analytics:
 gauges_analytics:
+# Naver Search ID
+naver_search: 7086f36a3503b839592c63df877c88aaf8b4256c
 # Favicon path
 favicon: /images/favicon.png
 # OpenGraph image
