@@ -204,7 +204,7 @@
     }
   </style>
   <div id="slogan-desktop" class="only-desktop">
-    <p><%- config.description %></p>
+    <p><%- config.description.replaceAll(',', '<br>') %></p>
     <h1>
       <span id="typed-1"></span>
       <strong id="typed-2" style="visibility: hidden;"></strong>
@@ -287,7 +287,7 @@
     <%= config.subtitle %>
     <strong><%= config.author %> 입니다</strong>
   </h1>
-  <p><%- config.description %></p>
+  <p><%- config.description.replaceAll(',', '<br>') %></p>
 </div>
 
 <script>
