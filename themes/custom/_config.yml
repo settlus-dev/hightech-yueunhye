@@ -76,7 +76,7 @@ naver_search: 7086f36a3503b839592c63df877c88aaf8b4256c
 # Favicon path
 favicon: /images/favicon.png
 # OpenGraph image
-image: /images/ogimage.png
+image: /images/ogimage.jpg
 # Twitter ID
 twitter:
 fb_admins:
