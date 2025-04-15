@@ -45,6 +45,9 @@
   </ul>
 </section>
 
+<%- partial('_partial/achievement-list') %>
+<div style="height: 50px;"></div>
+
 <script>
   axios.get('https://7q4yn3iplb.execute-api.ap-northeast-2.amazonaws.com/rss/ulive_')
     .then(function (response) {

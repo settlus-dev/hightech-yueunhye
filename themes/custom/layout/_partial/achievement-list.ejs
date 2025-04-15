@@ -1,0 +1,123 @@
+<style>
+  #achievement-list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+  }
+  #achievement-list li {
+    overflow: hidden;
+    list-style: none;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+  }
+  #achievement-list a {
+    display: flex;
+    align-items: center;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  #achievement-list figure {
+    width: 80px;
+    height: 80px;
+    margin: 0 15px 0 0;
+    overflow: hidden;
+  }
+  #achievement-list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #achievement-list p {
+    margin: 0;
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    #achievement-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    #achievement-list li {
+      transition: all 0.2s ease;
+    }
+    #achievement-list li:hover {
+      box-shadow: 0 10px 50px -30px rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px);
+    }
+  }
+</style>
+
+<ul id="achievement-list">
+  <li>
+    <a href="/achievements/상속증여평가">
+      <figure>
+        <img src="/images/fig-service-7.jpg" width="80" height="80" alt="">
+      </figure>
+      <p>상속증여평가실적</p>
+    </a>
+  </li>
+  <li>
+    <a href="/achievements/영업권평가">
+      <figure>
+        <img src="/images/fig-service-5.jpg" width="80" height="80" alt="">
+      </figure>
+      <p>영업권평가실적</p>
+    </a>
+  </li>
+  <li>
+    <a href="/achievements/특허권평가">
+      <figure>
+        <img src="/images/fig-service-9.jpg" width="80" height="80" alt="">
+      </figure>
+      <p>특허권평가실적</p>
+    </a>
+  </li>
+  <li>
+    <a href="/achievements/유튜브평가">
+      <figure>
+        <img src="/images/fig-service-10.jpg" width="80" height="80" alt="">
+      </figure>
+      <p>유튜브평가실적</p>
+    </a>
+  </li>
+  <li>
+    <a href="/achievements/저작권평가">
+      <figure>
+        <img src="/images/fig-service-11.jpg" width="80" height="80" alt="">
+      </figure>
+      <p>저작권평가실적</p>
+    </a>
+  </li>
+  <li>
+    <a href="/achievements/상표권평가">
+      <figure>
+        <img src="/images/fig-service-3.jpg" width="80" height="80" alt="">
+      </figure>
+      <p>상표권평가실적</p>
+    </a>
+  </li>
+  <li>
+    <a href="/achievements/병원평가">
+      <figure>
+        <img src="/images/fig-service-12.jpg" width="80" height="80" alt="">
+      </figure>
+      <p>병원평가실적</p>
+    </a>
+  </li>
+  <li>
+    <a href="/achievements/소송평가">
+      <figure>
+        <img src="/images/fig-service-6.jpg" width="80" height="80" alt="">
+      </figure>
+      <p>소송평가실적</p>
+    </a>
+  </li>
+  <li>
+    <a href="/achievements/특수평가">
+      <figure>
+        <img src="/images/fig-service-4.jpg" width="80" height="80" alt="">
+      </figure>
+      <p>특수평가실적</p>
+    </a>
+  </li>
+</ul>
