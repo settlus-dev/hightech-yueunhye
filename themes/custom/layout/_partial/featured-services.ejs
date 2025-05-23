@@ -1,8 +1,8 @@
 <style>
   ul.featured-services {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.9375em;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    gap: 1.2em;
     padding: 0;
     list-style: none;
     perspective: 1000px;
@@ -10,17 +10,13 @@
   ul.featured-services li {
     position: relative;
     background: var(--color-mobile-nav-background);
-    border-radius: 0.9375em;
+    border-radius: 1em;
     transition: all 0.4s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transform-style: preserve-3d;
     transform: translateZ(0);
   }
   @media (min-width: 768px) {
-    ul.featured-services {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25em;
-    }
     ul.featured-services li:hover {
       background: #000;
       transform: scale(1.05) rotateY(-5deg) rotateZ(-0.3deg) translateZ(0.625em);
@@ -34,14 +30,13 @@
   }
   ul.featured-services li figure {
     margin: 0;
-    padding: 1.5em;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 20px 15px;
   }
   ul.featured-services li figure big {
     white-space: nowrap;
-    line-height: 1.1;
-    font-size: 2.5em;
-    font-weight: 800;
+    line-height: 1.2;
+    font-size: 1.3em;
+    font-weight: bold;
     color: rgba(255,255,255,0.5);
     text-shadow: 0 0.125em 0.625em rgba(0,0,0,0.3);
     background: linear-gradient(90deg,
@@ -54,6 +49,9 @@
     transition: all 0.4s ease;
   }
   @media (min-width: 768px) {
+    ul.featured-services li figure big {
+      font-size: 1.4em;
+    }
     ul.featured-services li:hover figure big {
       background: linear-gradient(90deg,
         rgba(255,255,255,0.5) 0%,
@@ -69,18 +67,26 @@
     }
   }
   ul.featured-services p {
-    padding: 1.5em;
-    font-size: 1.125em;
+    padding: 0 20px 15px;
+    font-size: 0.75em;
     line-height: 1.4;
     color: #fff;
     text-shadow: 0 0.125em 0.25em rgba(0,0,0,0.3);
   }
   ul.featured-services li u {
     display: block;
-    padding: 0 2em 2em;
+    padding: 0 20px 20px;
     text-decoration: none;
-    font-size: 0.875em;
+    font-size: 0.75em;
     color: rgba(255,255,255,0.6);
+  }
+  @media (min-width: 768px) {
+    ul.featured-services p {
+      font-size: 1em;
+    }
+    ul.featured-services li u {
+      font-size: 0.875em;
+    }
   }
 </style>
 
@@ -121,7 +127,7 @@
       </u>
     </a>
   </li>
-  <li>
+  <!-- <li>
     <a href="/contact">
       <figure>
         <big>
@@ -138,5 +144,5 @@
         <i class="fa fa-angle-right"></i>
       </u>
     </a>
-  </li>
+  </li> -->
 </ul>
